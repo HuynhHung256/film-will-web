@@ -27,14 +27,16 @@
             HUNG VUONG PLAZA CGV
           </h1>
           <p>Floor 7, 126 Hung Vuong Street, 5 District, HCM City</p>
-          <TicketBook v-for="item in Ticket" :ticket="item" :key="item.type" />
+          <TicketBook v-for="item in Ticket" :ticket="item" :key="item.type" @set-time="setTime"/>
         </div>
       </div>
+       {{this.timeSelected}}
     </div>
     <div class="ml-[100px] w-[40%]">
       <FilmInfoCard :filmInfo="this.FilmInfo" :img="this.Img" class="mb-5"/>
-      <TicketCard :ticket="this.TicketCard" />
+      <TicketCard :ticket="this.TicketCard" :timeSelected="TimeSelected"/>
     </div>
+   
   </div>
 </template>
 
@@ -44,6 +46,7 @@ import FilmInfoCard from "@/components/FilmInfoCard";
 import TicketBook from "@/components/TicketBook";
 import TicketCard from "@/components/TicketCard";
 
+
 export default {
   components: {
     DateCard,
@@ -51,6 +54,7 @@ export default {
   },
   data() {
     return {
+      TimeSelected: '',
       DateDetail: [
         {
           daymonth: "13 July",
@@ -127,5 +131,10 @@ export default {
       }
     };
   },
+  methods: {
+    setTime(value) {
+      this.TimeSelected = value;
+    }
+  }
 };
 </script>

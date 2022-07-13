@@ -4,15 +4,19 @@
       <h1 class="text-[20px] font-medium text-primary">
         {{ ticket.type }}
       </h1>
-      <p class="text-[18px] text-red-500 mr-4">Price: {{ formatCurrency(ticket.price) }} VND</p>
+      <p class="text-[18px] text-red-500 mr-4">
+        Price: {{ formatCurrency(ticket.price) }} VND
+      </p>
     </div>
     <div class="flex flex-wrap">
       <span
         v-for="item in ticket.time"
         :key="item"
-        class="py-3 mr-3 mb-3 rounded border border-primary font-medium w-[100px] text-center cursor-pointer"
-        >{{ item }}</span
-      >
+        class="py-3 mr-3 mb-3 rounded border border-primary font-medium w-[100px] text-center cursor-pointer shadow"
+        v-bind:class="timeSelected === item && 'card-active'"
+        @click="activeCard"
+        >{{ item }}
+      </span>
     </div>
   </div>
 </template>
@@ -25,11 +29,21 @@ export default {
       required: true,
     },
   },
-   methods: {
+  data() {
+    return {
+      timeSelected: "Alo",
+    };
+  },
+  methods: {
     formatCurrency(value) {
-      return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
-    }
-  }
+      return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    },
+    activeCard(e) {
+      console.log(e.target.innerText, this.timeSelected);
+      this.timeSelected = e.target.innerText;
+      this.$emit("set-time", e.target.innerText);
+    },
+  },
   //
 };
 </script>

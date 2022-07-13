@@ -8,10 +8,14 @@
     </p>
     <div class="flex text-[20px] font-medium justify-between mb-3">
       <h1>{{ ticket.type }}</h1>
-      <p>{{ ticket.time }}</p>
+      <p>{{ this.timeSelected }}</p>
     </div>
     <p>*Seat selection can be made after this</p>
-    <button class="text-white btn-color rounded-lg text-[20px] w-full py-4 font-bold mt-2">BUY NOW</button>
+    <button
+      class="text-white btn-color rounded-lg text-[20px] w-full py-4 font-bold mt-2"
+    >
+      BUY NOW
+    </button>
   </div>
 </template>
 
@@ -22,11 +26,13 @@ export default {
       type: Object,
       required: true,
     },
+    timeSelected: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
-    // formatCurrency(value) {
-    //   return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
-    // },
+ 
   },
   //
 };
