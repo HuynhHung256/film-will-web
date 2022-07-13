@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.text-primary {
+    color: #5A637A;
+}
+
+.border-primary {
+    border-color: #5A637A;
+}
+
+.bg-primary {
+    background-color: #5A637A;
+}

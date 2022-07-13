@@ -1,5 +1,5 @@
 <template>
-  <a-card>
+  <div>
     <img :src="img" class="w-[400px] h-[500px]" />
     <h1 class="text-[24px] font-bold text-center">{{ filmInfo.title }}</h1>
     <div class="flex">
@@ -18,7 +18,7 @@
       <p class="flex-1">Age Rating</p>
       <p>{{ filmInfo.ageRating }}</p>
     </div>
-  </a-card>
+  </div>
 </template>
 
 <script>
