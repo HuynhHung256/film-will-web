@@ -1,4 +1,5 @@
 <template>
+<header>
     <nav class="bg-gray-0">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
@@ -30,8 +31,8 @@
               </div>
               <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex-shrink-0 flex items-center">
-                  <img class="block lg:hidden h-8 w-auto scale-150" src="component/tix id 1.png" alt="">
-                  <img class="hidden lg:block h-8 w-auto scale-150" src="component/tix id 1.png" alt="">
+                  <img class="block lg:hidden h-8 w-auto scale-150" src="@/assets/logo.png" alt="">
+                  <img class="hidden lg:block h-8 w-auto scale-150" src="@/assets/logo.png" alt="">
                 </div>
                 
               </div>
@@ -96,6 +97,7 @@
             </div>
           </div>
     </nav>
+</header>
 </template>
 
 <script>
