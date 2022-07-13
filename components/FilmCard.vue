@@ -14,7 +14,7 @@
     <a class="film-card__comments">{{ film.comments }} comments</a>
     
   </div> -->
-  <div>
+  <!-- <div>
     <div class="group relative w-96">
       <img class="rounded-md w-full object-cover" :src="img" />
       <div class="rounded-md absolute top-0 left-0 w-full h-0 flex flex-col justify-start 
@@ -26,8 +26,26 @@
       </div>
     </div>
     <h3 class="text-xl font-sans text-black">{{ film.title }}</h3>
-  </div>
-  
+  </div> -->
+  <div class="bg-white">
+    <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Film</h2>
+
+      <!-- <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"> -->
+        <a href="#" class="group">
+          <div class="w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+            <img :src=img class="w-full h-full object-center object-cover group-hover:opacity-75" />
+          </div>
+          <p class="font-sans text-3xl text-center text-gray-700 mt-8 font-bold">
+            {{ film.title }}
+          </p>
+          <!-- <p class="mt-1 text-lg font-medium text-gray-900">
+            {{ product.price }}
+          </p> -->
+        </a>
+      </div>
+    </div>
+  <!-- </div> -->
 </template>
 
 <script>

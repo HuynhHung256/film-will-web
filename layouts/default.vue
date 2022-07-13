@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container mx-auto px-10">
+  <div id="app" class="container mx-auto">
     <div id="nav-bar">
       <NavBar />
     </div>
