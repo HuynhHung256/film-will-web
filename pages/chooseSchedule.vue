@@ -18,7 +18,7 @@
           <h1 class="mx-5">HO CHI MINH</h1>
           <img src="../assets/images/vector-down.png" class="h-[10px]" />
         </div>
-        <div class="w-[52%]">
+        <div class="w-[60%]">
           <h1 class="flex text-[24px] font-semibold items-center">
             <img
               src="../assets/images/Star.png"
@@ -31,8 +31,9 @@
         </div>
       </div>
     </div>
-    <div class="ml-[100px]">
-      <FilmInfoCard :filmInfo="this.FilmInfo" :img="this.Img" />
+    <div class="ml-[100px] w-[40%]">
+      <FilmInfoCard :filmInfo="this.FilmInfo" :img="this.Img" class="mb-5"/>
+      <TicketCard :ticket="this.TicketCard" />
     </div>
   </div>
 </template>
@@ -41,6 +42,7 @@
 import DateCard from "@/components/DateCard";
 import FilmInfoCard from "@/components/FilmInfoCard";
 import TicketBook from "@/components/TicketBook";
+import TicketCard from "@/components/TicketCard";
 
 export default {
   components: {
@@ -117,6 +119,12 @@ export default {
           time: ["12:15", "13:45", "14:50"],
         },
       ],
+      TicketCard: {
+        theater_name: "GRAND INDONESIA CGV",
+        date: "Thursday, 16 December 2021",
+        type: "REGULAR",
+        time: "14:40"
+      }
     };
   },
 };

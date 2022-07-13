@@ -10,7 +10,7 @@
       <span
         v-for="item in ticket.time"
         :key="item"
-        class="py-3 mr-3 mb-3 rounded border border-primary font-medium w-[100px] text-center"
+        class="py-3 mr-3 mb-3 rounded border border-primary font-medium w-[100px] text-center cursor-pointer"
         >{{ item }}</span
       >
     </div>

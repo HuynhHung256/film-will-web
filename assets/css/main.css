@@ -14,3 +14,17 @@
 .bg-primary {
     background-color: #5A637A;
 }
+
+.btn-color {
+    background-color: #1A2C50;
+}
+
+.card-disable {
+    color: #9DA8BE;
+    background-color: #DADFE8;
+}
+
+.card-active {
+    color: white;
+    background-color: #1A2C50;
+}
