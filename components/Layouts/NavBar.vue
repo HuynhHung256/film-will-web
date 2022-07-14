@@ -30,9 +30,9 @@
                 </button>
               </div>
               <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex-shrink-0 flex items-center">
-                  <img class="block lg:hidden h-8 w-auto scale-150" src="@/assets/images/logos/logo.png" alt="">
-                  <img class="hidden lg:block h-8 w-auto scale-150" src="@/assets/images/logos/logo.png" alt="">
+                <div class="aspect-[1/1]">
+                  <img class="block lg:hidden h-10 w-10" src="@/assets/images/logos/logo1.png" alt="">
+                  <img class="hidden lg:block h-10 w-10" src="@/assets/images/logos/logo1.png" alt="">
                 </div>
                 
               </div>

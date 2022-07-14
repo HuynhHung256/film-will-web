@@ -3,7 +3,7 @@ export default {
   ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'film-will',
+    title: 'Fiml Will',
     htmlAttrs: {
       lang: 'en'
     },
