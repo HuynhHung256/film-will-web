@@ -10,11 +10,11 @@
         </div>
       </div>
       <div>
-        <div class="flex items-center mt-2">
+        <!-- <div class="flex items-center mt-2">
           <img src="../assets/images/location.png" />
           <h1 class="mx-5">HO CHI MINH</h1>
           <img src="../assets/images/vector-down.png" class="h-[10px]" />
-        </div>
+        </div> -->
         <div class="w-[60%]">
           <h1 class="flex text-[24px] font-semibold items-center">
             <img src="../assets/images/Star.png" class="w-[32px] h-[32px] mr-3" />
