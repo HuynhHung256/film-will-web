@@ -1,5 +1,5 @@
 <template>
-  <div id="content">
+  <div id="content" class="mt-10">
     <div id="film-slider" class="2xl:px-60 xl:px-52 lg:px-44">
       <carousel
         :per-page="2"

@@ -1,7 +1,7 @@
 <template>
-<header>
-    <nav class="bg-slate-5">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+<header class="">
+    <nav class="bg-slate-5 w-full">
+        <div class="px-52 py-2 shadow-md">
             <div class="relative flex items-center justify-between h-16">
               <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <!-- Mobile menu button-->

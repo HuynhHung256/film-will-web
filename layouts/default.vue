@@ -1,11 +1,13 @@
 <template>
-  <div id="app" class="container mx-auto">
+  <div id="app">
     <div id="nav-bar">
       <NavBar />
     </div>
-    <div id="main">
+    <div id="main" class="container mx-auto">
       <Nuxt />
-      <Footer></Footer>
+    </div>
+    <div id="footer">
+      <Footer/>
     </div>
   </div>
 </template>

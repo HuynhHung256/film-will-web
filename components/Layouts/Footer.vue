@@ -1,18 +1,18 @@
 <template>
-  <footer class=" border-t-2 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="md:flex md:justify-between">
-      <div class="mb-6 md:mb-0">
-        <a href="#" class="flex items-center scale-150  py-8">
+  <footer class="w-full">
+    <div class="md:flex md:justify-between border-t-2 ">
+      <div class="mb-6 xl:px-52 md:px-40">
+        <a href="#" class="flex items-center scale-150 py-8">
           <img src="@/assets/images/logos/logo.png" class="mr-8 h-8 w-8 scale-150" alt="" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap"></span>
         </a>
       </div>
       <div class="py-8 grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
         <div>
-          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Company</h2>
           <ul class="text-gray-600 dark:text-gray-400">
             <li class="mb-4">
-              <a href="#" class="hover:underline">Contact Us</a>
+              <a href="#" class="hover:underline ">Contact Us</a>
             </li>
             <li class="mb-4">
               <a href="#" class="hover:underline">About</a>
