@@ -1,0 +1,51 @@
+<template>
+  <div class="mt-5">
+    <div class="flex items-center justify-between">
+      <h1 class="text-[20px] font-medium text-primary">
+        {{ ticket.type }}
+      </h1>
+      <p class="text-[18px] text-red-500 mr-4">
+        Price: {{ formatCurrency(ticket.price) }} VND
+      </p>
+    </div>
+    <div class="flex flex-wrap">
+      <span
+        v-for="item in ticket.time"
+        :key="item"
+        class="py-3 mr-3 mb-3 rounded border border-primary font-medium w-[100px] text-center cursor-pointer shadow"
+        v-bind:class="timeSelected === item && 'card-active'"
+        @click="activeCard"
+        >{{ item }}
+      </span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    ticket: {
+      type: Object,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      timeSelected: "",
+    };
+  },
+  methods: {
+    formatCurrency(value) {
+      return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    },
+    activeCard(e) {
+      console.log(e.target.parentElement.previousElementSibling.firstChild.innerText);
+      const type = e.target.parentElement.previousElementSibling.firstChild.innerText;
+
+      this.timeSelected = e.target.innerText;
+      this.$emit("set-ticket", {time: e.target.innerText, type});
+    },
+  },
+  //
+};
+</script>
