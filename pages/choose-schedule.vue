@@ -45,6 +45,8 @@ export default {
   components: {
     DateCard,
     FilmInfoCard,
+    TicketBook,
+    TicketCard
   },
   data() {
     return {
@@ -128,7 +130,7 @@ export default {
         },
       ],
       TicketCard: {
-        theater_name: "GRAND INDONESIA CGV",
+        theater_name: "HUNG VUONG PLAZA CGV",
         date: "Thursday, 16 December 2021",
         type: "REGULAR",
         time: "14:40"
