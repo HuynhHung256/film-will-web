@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,89 +9,149 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>Document</title>
   <style>
-    #chosen::before{
-      content:"";
+    #chosen::before {
+      content: "";
       position: absolute;
       width: 15px;
       height: 15px;
       background: #1A2C50;
-      left:-2px;
-      bottom:5px;
+      left: -2px;
+      bottom: 5px;
     }
-    #empty::before{
-      content:"";
+
+    #empty::before {
+      content: "";
       position: absolute;
       width: 15px;
       height: 15px;
       background: #fff;
-      border:1px solid #000;
-      left:-2px;
-      bottom:5px;
+      border: 1px solid #000;
+      left: -2px;
+      bottom: 5px;
     }
-    #choosing::before{
-      content:"";
+
+    #choosing::before {
+      content: "";
       position: absolute;
       width: 15px;
       height: 15px;
       background: #118EEA;
-      left:-2px;
-      bottom:5px;
+      left: -2px;
+      bottom: 5px;
+    }
+
+    .seats:hover {
+      background-color: #544a7c;
+      color: #fff;
+    }
+
+    .seats:focus {
+      background-color: #118EEA;
+      color: #fff;
+    }
+
+    .seats:disabled {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .return:hover {
+      background-color: #544a7c;
+      color: #fff;
+    }
+
+    .confirmation:hover {
+      background-color: #544a7c;
     }
   </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            maxWidth: {
-              'custom': '1096px',
-            }
-          }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          maxWidth: {
+            'custom': '1296px',
+          },
+          witdh: {
+            '1/9': '11.11%',
+          },
+          color: {
+            'chosen': '#1A2C50',
+            'choosing': '#118EEA',
+          },
         }
       }
-    </script>
+    }
+  </script>
 </head>
+
 <body>
   <div class="container">
     <div class="relative ml-14">
-    <div>
-    <h1 class="text-3xl font-bold font-sans text-black pb-4">
-      CHOOSE SEATS
-    </h1>
-    <p class="text-slate-600 drop-shadow-xl">Choose the seat you will occupy during the screening</p>
-  </div>
-<div class="max-w-custom w-full">
-  <div class="flex justify-around ml-20 mt-20">
-    <div class="w-1/5 justify-start">
-      <div class="flex items-center justify-between font-sans text-2xl font-bold">
-        <img style="height:20px" src="clock.svg">
-      14:00
+      <div>
+        <h1 class="text-3xl font-bold font-sans text-black pb-4">
+          CHOOSE SEATS
+        </h1>
+        <p class="text-slate-600 drop-shadow-xl">Choose the seat you will occupy during the screening</p>
+      </div>
+      <div class="max-w-custom w-full">
+        <div class="flex justify-around ml-20 mt-20">
+          <div class="w-1/5 justify-start">
+            <div class="flex items-center justify-between font-sans text-2xl font-bold">
+              <img style="height:20px" src="clock.svg">
+              14:00
+            </div>
+          </div>
+          <div class="w-3/5">
+            <ul class="flex justify-end">
+              <li class="relative"><span id="chosen" class="px-5">Chosen</span></li>
+              <li class="relative"><span id="empty" class="px-5">Empty</span></li>
+              <li class="relative"><span id="choosing" class="px-5">Choosing</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex ml-10 mt-20">
+          <div id="onleft" class="w-1/2"></div>
+          <div id="onright" class="w-1/2"></div>
+        </div>
+        <div
+          class="flex w-full mt-14 bg-[#118EEA] h-14 text-white text-center justify-center items-center font-sans text-2xl font-bold">
+          Cinema Screen Here</div>
+        <div class="flex width-full mx-20 mt-14">
+          <div class="flex w-1/2">
+            <div class="w-1/2">Total</div>
+            <div class="w-1/2">Choosing</div>
+          </div>
+          <div class="flex w-1/2 justify-end">
+            <div class="w-1/2">
+              <button
+                class="return w-1/2 w-[200px] ml-12 border-2 rounded-md px-3 font-sans text-xl py-3">RETURN</button>
+            </div>
+            <div class="w-1/2">
+              <button
+                class="confirmation w-1/2 w-[240px] bg-[#1A2C50] text-[#FFBE00] border-2 rounded-md px-3 font-sans text-xl py-3">CONFIRMATION</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="w-3/5">
-  <ul class="flex justify-end">
-    <li class="relative" ><span id="chosen" class="px-5">Chosen</span></li>
-    <li class="relative" ><span id="empty" class="px-5">Empty</span></li>
-    <li class="relative" ><span id="choosing" class="px-5">Choosing</span></li>
-  </ul>
-  </div>
-  </div>
-  <div class="flex ml-20 mt-20">
-    <div id="onleft" class="w-1/2 pr-10"></div>
-    <div id="onright"></div>
-  </div>
-</div>
-  </div>
 </body>
 <script>
-  $(document).ready(function(){
-    const args = ['A','B','C','D','E','F','G','H'];
-    for( var i = 0; i <= args.legth; i++)
-    {
-      for(var j = 1; j < 10; j++){
-    $('#onleft').append('<button><span>'+ args[i] + j +'</span></button>');
+  $(document).ready(function () {
+    const args = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+    for (var i = 0; i < args.length; i++) {
+      for (var j = 1; j < 11; j++) {
+        $("#onleft").append('<button class="seats border-2 rounded-lg w-[8%] pb-1 box-border mr-2 mb-2"><span class="text-sm font-sans text-center">' + args[i] + j + '</span></button>');
       }
-  }
-  $(body).append('<p>abc</p>');
+    }
+  });
+  $(document).ready(function () {
+    const args2 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+    for (var x = 0; x < args2.length; x++) {
+      for (var y = 11; y < 21; y++) {
+        $("#onright").append('<button class=" seats border-2 rounded-lg w-[8%] pb-1 box-border mr-2 mb-2"><span class="text-sm font-sans text-center">' + args2[x] + y + '</span></button>');
+      }
+    }
   });
 </script>
+
 </html>
