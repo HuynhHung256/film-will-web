@@ -6,7 +6,7 @@
     <div id="main" class="container mx-auto">
       <Nuxt />
     </div>
-    <div id="footer">
+    <div id="footer" class="mt-40">
       <Footer/>
     </div>
   </div>

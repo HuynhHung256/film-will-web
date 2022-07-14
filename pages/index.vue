@@ -1,8 +1,46 @@
 <template>
-  <div id="content" class="mt-10">
-    <div id="film-slider" class="2xl:px-60 xl:px-52 lg:px-44">
+  <div id="hompage" class="mt-10 px-20">
+        <div id="banner" class="mt-16">
       <carousel
-        :per-page="2"
+        :per-page="1"
+        :navigate-to="someLocalProperty"
+        :mouse-drag="false"
+        :autoplay="true"
+        :loop="true"
+        :autoplayTimeout="5000"
+        navigationEnabled="true"
+        :paginationEnabled="false"
+        :navigationClickTargetSize="40"
+        navigationNextLabel='
+          <button class="rounded-full bg-gray-50 p-2 font-bold text-gray-800 shadow-md hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          </button>
+        '
+        navigationPrevLabel='
+          <button class="rounded-full bg-gray-50 p-2 font-bold text-gray-800 shadow-md hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+        '
+      >
+        <slide>
+          <!-- <FilmCard :film="this.FilmDetail" :img="this.Img" /> -->
+          <img :src=Img class="w-full aspect-[5/1] object-center object-cover group-hover:opacity-75 rounded-md" />
+
+        </slide>
+        <slide>
+          <img :src=Img class="w-full aspect-[5/1] object-center object-cover group-hover:opacity-75 rounded-md" />
+
+          <!-- <FilmCard :film="this.FilmDetail" :img="this.Img" /> -->
+        </slide>
+      </carousel>
+    </div>
+    <div id="film-slider" class="">
+      <carousel
+        :per-page="3"
         :mouse-drag="false"
         :autoplay="true"
         :loop="true"
@@ -33,40 +71,61 @@
         <slide>
           <FilmCard :film="this.FilmDetail" :img="this.Img" />
         </slide>
+        <slide>
+          <FilmCard :film="this.FilmDetail" :img="this.Img" />
+        </slide>
       </carousel>
     </div>
-    <!-- <div id="news-slider">
-      <carousel>
-        :per-page="1"
-        :navigate-to="someLocalProperty"
-        :mouse-drag="false"
-        :autoplay="true"
-        :loop="true"
-        :autoplayTimeout="5000"
-        navigationEnabled="true"
-        navigationNextLabel='
-          <button class="rounded-full bg-gray-50 p-2 font-bold text-gray-800 shadow-md hover:bg-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-          </button>
-        '
-        navigationPrevLabel='
-          <button class="rounded-full bg-gray-50 p-2 font-bold text-gray-800 shadow-md hover:bg-gray-100">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-        '
-      >
-        <slide>
-          <FilmCard :film="this.FilmDetail" :img="this.Img" />
-        </slide>
-        <slide>
-          <FilmCard :film="this.FilmDetail" :img="this.Img" />
-        </slide>
-      </carousel>
-    </div> -->
+
+    <div id="film-news" class="">
+      <div class="grid grid-cols-2 place-items-center">
+        <div class="place-self-start">
+          <h2 class="text-4xl">
+            FilmWill news
+          </h2>
+          <p class="text-lg text-slate-500">
+            The latest news about the world of cinema for you!
+          </p>
+        </div>
+        <div class="place-self-end">
+          <a href="#" class="text-3xl text-blue-400 hover:underline hover:underline-offset-4">
+            See all
+          </a>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mt-10">
+          <div>01</div>
+          <div>02</div>
+          <div>03</div>
+          <div>04</div>
+          <div>05</div>
+          <div>06</div>
+          <div>09</div>
+        </div>
+      </div>
+    </div>
+        <div id="film-news" class="">
+      <div class="grid grid-cols-2 place-items-center">
+        <div class="place-self-start">
+          <h2 class="text-4xl">
+            In Future
+          </h2>
+          <p class="text-lg text-slate-500">
+            The latest news about the world of cinema for you!
+          </p>
+        </div>
+        <div class="place-self-end">
+          <a href="#" class="text-3xl text-blue-400 hover:underline hover:underline-offset-4">
+            See all
+          </a>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mt-10">
+          <div>01</div>
+          <div>02</div>
+          <div>03</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
