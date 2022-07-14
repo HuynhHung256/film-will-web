@@ -4,12 +4,9 @@
       <div class="border-b-2">
         <h1 class="text-[36px] font-bold">TIMETABLE</h1>
         <p>Choose the cinema schedule that you will watch</p>
-        <div class="flex my-5">
-          <DateCard
-            v-for="item in DateDetail"
-            :date="item"
-            :key="item.daymonth"
-          />
+        <div class="flex my-5 flex-wrap">
+          <DateCard v-for="item in DateDetail" :date="item" :key="item.daymonth"
+            v-bind:class="dateSelected === item && 'card-active'" :onClick="activeCard" />
         </div>
       </div>
       <div>
@@ -20,23 +17,20 @@
         </div>
         <div class="w-[60%]">
           <h1 class="flex text-[24px] font-semibold items-center">
-            <img
-              src="../assets/images/Star.png"
-              class="w-[32px] h-[32px] mr-3"
-            />
+            <img src="../assets/images/Star.png" class="w-[32px] h-[32px] mr-3" />
             HUNG VUONG PLAZA CGV
           </h1>
           <p>Floor 7, 126 Hung Vuong Street, 5 District, HCM City</p>
-          <TicketBook v-for="item in Ticket" :ticket="item" :key="item.type" @set-time="setTime"/>
+          <TicketBook v-for="item in Ticket" :ticket="item" :key="item.type" @set-ticket="setTicket" />
         </div>
       </div>
-       {{this.timeSelected}}
+      {{ this.timeSelected }}
     </div>
     <div class="ml-[100px] w-[40%]">
-      <FilmInfoCard :filmInfo="this.FilmInfo" :img="this.Img" class="mb-5"/>
-      <TicketCard :ticket="this.TicketCard" :timeSelected="TimeSelected"/>
+      <FilmInfoCard :filmInfo="this.FilmInfo" :img="this.Img" class="mb-5" />
+      <TicketCard :ticket="this.TicketCard" :infoSelected="InfoSelected" />
     </div>
-   
+
   </div>
 </template>
 
@@ -54,39 +48,49 @@ export default {
   },
   data() {
     return {
-      TimeSelected: '',
+      InfoSelected: {},
+      timeSelected: "",
+      dateSelected: "",
       DateDetail: [
         {
           daymonth: "13 July",
           kind: "WED",
+          value: "Wednesday, 13 July, 2022"
         },
         {
           daymonth: "14 July",
           kind: "THU",
+          value: "Thursday, 14 July, 2022"
         },
         {
           daymonth: "15 July",
           kind: "FRI",
+          value: "Friday, 15 July, 2022"
         },
         {
           daymonth: "16 July",
           kind: "SAT",
+          value: "Saturday, 16 July, 2022"
         },
         {
           daymonth: "17 July",
           kind: "SUN",
+          value: "Sunday, 17 July, 2022"
         },
         {
           daymonth: "18 July",
           kind: "MON",
+          value: "Monday, 18 July, 2022"
         },
         {
           daymonth: "19 July",
           kind: "TUE",
+          value: "Tuesday, 19 July, 2022"
         },
         {
           daymonth: "20 July",
           kind: "WED",
+          value: "Wednesday, 20 July, 2022"
         },
       ],
       FilmInfo: {
@@ -132,9 +136,12 @@ export default {
     };
   },
   methods: {
-    setTime(value) {
-      this.TimeSelected = value;
-    }
+    setTicket(value) {
+      this.InfoSelected = { ...this.InfoSelected, time: value.time, type: value.type };
+    },
+    activeCard: function(value) {
+      console.log(value);
+    },
   }
 };
 </script>

@@ -31,7 +31,7 @@ export default {
   },
   data() {
     return {
-      timeSelected: "Alo",
+      timeSelected: "",
     };
   },
   methods: {
@@ -39,9 +39,11 @@ export default {
       return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
     },
     activeCard(e) {
-      console.log(e.target.innerText, this.timeSelected);
+      console.log(e.target.parentElement.previousElementSibling.firstChild.innerText);
+      const type = e.target.parentElement.previousElementSibling.firstChild.innerText;
+
       this.timeSelected = e.target.innerText;
-      this.$emit("set-time", e.target.innerText);
+      this.$emit("set-ticket", {time: e.target.innerText, type});
     },
   },
   //

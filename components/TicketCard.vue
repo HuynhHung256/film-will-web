@@ -7,8 +7,8 @@
       {{ ticket.date }}
     </p>
     <div class="flex text-[20px] font-medium justify-between mb-3">
-      <h1>{{ ticket.type }}</h1>
-      <p>{{ this.timeSelected }}</p>
+      <h1>{{ infoSelected.type }}</h1>
+      <p>{{ infoSelected.time }}</p>
     </div>
     <p>*Seat selection can be made after this</p>
     <button
@@ -26,8 +26,8 @@ export default {
       type: Object,
       required: true,
     },
-    timeSelected: {
-      type: String,
+    infoSelected: {
+      type: Object,
       required: true,
     },
   },
