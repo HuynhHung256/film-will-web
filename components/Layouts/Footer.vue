@@ -3,13 +3,13 @@
     <div class="mb-6 xl:px-52 md:px-20">
       <div class="grid grid-flow-row grid-cols-4 gap-4 py-10">
         <div class="col-span-1 flex justify-center">
-          <a href="#" class="">
+          <NuxtLink to="/">
             <img
               src="@/assets/images/logos/logo.png"
               class="h-32 w-32 xl:scale-150 md:scale-125"
               alt=""
             />
-          </a>
+          </NuxtLink>
         </div>
         <div class="col-span-2 flex justify-evenly">
           <div class="">

@@ -11,11 +11,13 @@
       <p>{{ infoSelected.time }}</p>
     </div>
     <p>*Seat selection can be made after this</p>
-    <button
-      class="text-white btn-color rounded-lg text-[20px] w-full py-4 font-bold mt-2"
-    >
-      BUY NOW
-    </button>
+    <nuxt-link to="/payment">
+      <button
+        class="text-white btn-color rounded-lg text-[20px] w-full py-4 font-bold mt-2"
+      >
+        BUY NOW
+      </button>
+    </nuxt-link>
   </div>
 </template>
 

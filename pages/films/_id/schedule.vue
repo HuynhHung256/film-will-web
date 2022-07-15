@@ -6,7 +6,7 @@
         <p>Choose the cinema schedule that you will watch</p>
         <div class="flex my-5 flex-wrap">
           <DateCard v-for="item in DateDetail" :date="item" :key="item.daymonth"
-            v-bind:class="dateSelected === item && 'card-active'" :onClick="activeCard" />
+            v-bind:class="dateSelected === item && 'card-active'"  />
         </div>
       </div>
       <div>

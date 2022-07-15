@@ -34,10 +34,10 @@
             </button>
           </div>
           <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="aspect-[1/1]">
+            <NuxtLink to="/">
               <img class="block lg:hidden h-10 w-10" src="@/assets/images/logos/logo1.png" alt="">
               <img class="hidden lg:block h-10 w-10" src="@/assets/images/logos/logo1.png" alt="">
-            </div>
+            </NuxtLink>
 
 
             <form class="flex items-center w-[400px] ml-20">
@@ -68,7 +68,7 @@
 
 
           </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 scale-125">
             <div class="hidden sm:block sm:ml-0 px-8">
               <div class="flex space-x-4">
                 <a href="#"
@@ -83,7 +83,7 @@
             </div>
 
             <button type="button"
-              class="bg-gray-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+              class="p-1 rounded-full hover:bg-slate-100 scale-125 mr-3">
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
               <svg class="text-gray-700 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -100,7 +100,7 @@
                   class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                   id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="sr-only">Open user menu</span>
-                  <img class="h-8 w-8 rounded-full"
+                  <img class="h-10 w-10 rounded-full"
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt="">
                 </button>
