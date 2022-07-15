@@ -83,7 +83,7 @@
             </div>
 
             <button type="button"
-              class="p-1 rounded-full hover:bg-slate-100 scale-125 mr-3">
+              class="p-1 rounded-full hover:bg-slate-100 scale-110 mr-3">
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
               <svg class="text-gray-700 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
