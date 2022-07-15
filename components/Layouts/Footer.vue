@@ -1,7 +1,7 @@
 <template>
   <footer class="w-full border-t-2">
     <div class="mb-6 xl:px-52 md:px-20">
-      <div class="grid grid-flow-row grid-cols-4 gap-4 py-10">
+      <div class="grid grid-flow-row grid-cols-6 gap-4 py-10">
         <div class="col-span-1 flex justify-center">
           <NuxtLink to="/">
             <img
@@ -11,68 +11,69 @@
             />
           </NuxtLink>
         </div>
-        <div class="col-span-2 flex justify-evenly">
-          <div class="">
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
-              Company
-            </h2>
-            <ul class="text-gray-600">
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Contact Us</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">About</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Partner</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
-              About
-            </h2>
-            <ul class="text-gray-600">
-              <li class="mb-4">
-                <a href="#" class="hover:underline">TIX ID News</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Cinema</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">My Ticket</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Payment</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Instalment</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
-              Support
-            </h2>
-            <ul class="text-gray-600">
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Help Center</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Privacy Policy</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">FAQ</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Term and Conditions</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Update Covid</a>
-              </li>
-            </ul>
-          </div>
+        <div></div>
+        <!-- <div class="col-span-2 flex justify-evenly"> -->
+        <div class="">
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+            Company
+          </h2>
+          <ul class="text-gray-600">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Contact Us</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">About</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Partner</a>
+            </li>
+          </ul>
         </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+            About
+          </h2>
+          <ul class="text-gray-600">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">TIX ID News</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Cinema</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">My Ticket</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Payment</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Instalment</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+            Support
+          </h2>
+          <ul class="text-gray-600">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Help Center</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Privacy Policy</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">FAQ</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Term and Conditions</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Update Covid</a>
+            </li>
+          </ul>
+        </div>
+        <!-- </div> -->
         <div class="col-span-1 flex-col space-y-3 grid justify-items-center">
           <div>
             <h2 class="text-md font-semibold text-gray-900">
@@ -81,7 +82,7 @@
           </div>
           <div class="text-gray-600 scale-125 flex flex-row space-x-2">
             <div>
-              <a href="#" class=" text-gray-500 hover:text-gray-900">
+              <a href="#" class="text-gray-500 hover:text-gray-900">
                 <svg
                   class="w-5 h-5"
                   fill="currentColor"
@@ -113,7 +114,7 @@
             </div>
             <div>
               <!--FaceBook Icon-->
-              <a href="#" class=" text-gray-500 hover:text-gray-900">
+              <a href="#" class="text-gray-500 hover:text-gray-900">
                 <svg
                   class="w-5 h-5"
                   fill="currentColor"
@@ -132,7 +133,7 @@
           <div class="space-y-4">
             <!--Google Play & AppStore-->
             <h2 class="text-md font-semibold text-gray-900">
-              Download Application Group 14
+              Download App
             </h2>
           </div>
           <div>
@@ -155,13 +156,13 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center"
-        >© 2022
-        <a href="https://flowbite.com/" class="hover:underline">FILM WILL™</a>.
-        All Rights Reserved.
-      </span>
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center"
+          >© 2022
+          <a href="https://flowbite.com/" class="hover:underline">FILM WILL™</a
+          >. All Rights Reserved.
+        </span>
+      </div>
     </div>
   </footer>
 </template>
