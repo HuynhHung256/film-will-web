@@ -39,6 +39,8 @@ export default {
       return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
     },
     activeCard(e) {
+      console.log("ticket", this.ticket)
+      console.log("TIME SELECTED: ", e.target.innerText);
       console.log(e.target.parentElement.previousElementSibling.firstChild.innerText);
       const type = e.target.parentElement.previousElementSibling.firstChild.innerText;
 

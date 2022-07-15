@@ -1,8 +1,8 @@
 <template>
-  <div class="flex mx-20 my-10">
+  <div class="flex mx-36 my-10">
     <div>
       <div class="border-b-2">
-        <h1 class="text-[36px] font-bold">TIMETABLE</h1>
+        <h1 class="text-4xl font-bold">TIMETABLE</h1>
         <p>Choose the cinema schedule that you will watch</p>
         <div class="flex my-5 flex-wrap">
           <DateCard v-for="item in DateDetail" :date="item" :key="item.daymonth"
@@ -17,7 +17,7 @@
         </div> -->
         <div class="w-[60%]">
           <h1 class="flex text-[24px] font-semibold items-center">
-            <img src="../assets/images/Star.png" class="w-[32px] h-[32px] mr-3" />
+            <img src="@/assets/images/Star.png" class="w-[32px] h-[32px] mr-3" />
             HUNG VUONG PLAZA CGV
           </h1>
           <p>Floor 7, 126 Hung Vuong Street, 5 District, HCM City</p>
@@ -130,7 +130,7 @@ export default {
         },
       ],
       TicketCard: {
-        theater_name: "HUNG VUONG PLAZA CGV",
+        theater_name: "GRAND INDONESIA CGV",
         date: "Thursday, 16 December 2021",
         type: "REGULAR",
         time: "14:40"

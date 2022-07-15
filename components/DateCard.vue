@@ -1,5 +1,7 @@
 <template>
-  <div class="border rounded-lg p-4 mx-3 text-center cursor-pointer	w-[85px] shadow" @click="this.activeCard">
+  <div class="border
+   rounded-lg p-4 mx-3 my-3 text-center cursor-pointer	
+   w-[85px] shadow  hover:-translate-y-1 hover:scale-125 duration-500" @click="this.activeCard">
     <p class="text-[16px]">{{ date.daymonth }}</p>
     <p class="text-[20px] font-bold">{{ date.kind }}</p>
     <span class="hidden">{{date.value}}</span>
