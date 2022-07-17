@@ -64,7 +64,7 @@
       <div class="grid grid-cols-2 place-items-center">
         <div class="place-self-start">
           <h2 class="text-3xl">FilmWill news</h2>
-          <p class="text-slate-500">
+          <p class="text-slate-700">
             The latest news about the world of cinema for you!
           </p>
         </div>
@@ -90,7 +90,7 @@
       <div class="grid grid-cols-2 place-items-center">
         <div class="place-self-start">
           <h2 class="text-3xl">In Future</h2>
-          <p class="text-slate-500">
+          <p class="text-slate-700">
             Wait for his presence in your favorite cinema!
           </p>
         </div>
