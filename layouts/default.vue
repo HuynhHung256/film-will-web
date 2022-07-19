@@ -1,9 +1,11 @@
 <template>
-  <div id="app">
-    <div id="nav-bar">
+  <div id="app" class="bg-slate-50">
+    <div id="nav-bar" 
+    class="fixed z-50 w-screen top-0"
+    >
       <NavBar />
     </div>
-    <div id="main" class="container mx-auto">
+    <div id="main" class="container mx-auto mt-32">
       <Nuxt />
     </div>
     <div id="footer" class="mt-40">

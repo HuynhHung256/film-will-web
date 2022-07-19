@@ -30,9 +30,9 @@
         </slide>
       </carousel>
     </div>
-    <div id="film-slider" class="mt-20 mx-20">
+    <div id="film-slider" class="mt-20 mx-10">
       <carousel
-        :per-page="3"
+        :per-page="4"
         :mouse-drag="false"
         :autoplay="true"
         :loop="true"

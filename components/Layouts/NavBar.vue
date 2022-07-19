@@ -1,6 +1,6 @@
 <template>
   <header class="">
-    <nav class="bg-slate-5 w-full xl:px-52 md:px-32 sm:px-20 py-3 shadow-lg">
+    <nav class="bg-white w-full xl:px-52 md:px-32 sm:px-20 py-3 shadow-lg">
       <div class="grid grid-flow-row grid-cols-5 gap-x-4">
         <div
           class="
