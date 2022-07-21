@@ -5,7 +5,7 @@
         <div class="col-span-1 flex justify-center">
           <NuxtLink to="/">
             <img
-              src="@/assets/images/logos/logo.png"
+              src="@/assets/images/logos/logo2.png"
               class="h-32 w-32 xl:scale-150 md:scale-125"
               alt=""
             />
