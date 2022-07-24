@@ -1,19 +1,20 @@
 <template>
   <header class="">
-    <nav class="bg-white w-full xl:px-52 md:px-32 sm:px-20 py-3 shadow-lg">
-      <div class="grid grid-flow-row grid-cols-5 gap-x-4">
+    <nav class="bg-white w-full xl:px-48 lg:px-32 md:px-26 sm:px-10 xm:px-10 xl:py-3 sm:py-0 shadow-lg">
+      <div
+        class="grid grid-flow-row grid-cols-5 gap-x-4 xl:scale-100 sm:scale-75"
+      >
         <div
           class="
             col-span-2
             grid grid-flow-row grid-cols-5
             gap-4
-            justify-start
-            justify-items-start
+            justify-start justify-items-start
             items-center
             content-center
           "
-        >          
-        <div class="col-span-1">
+        >
+          <div class="col-span-1">
             <NuxtLink to="/">
               <img
                 class="h-10 w-10 aspect-square xl:scale-100"
@@ -81,15 +82,14 @@
         <div
           class="
             col-span-2
-            grid grid-flow-row grid-cols-9
+            grid grid-flow-row grid-cols-10
             gap-4
-            justify-end
-            justify-items-center
+            justify-end justify-items-center
             items-center
             content-center
           "
         >
-          <div class=" col-span-2">
+          <div class="col-span-2">
             <a
               href="#"
               class="
@@ -138,10 +138,7 @@
           </div>
 
           <div class="col-span-2">
-            <button
-              type="button"
-              class="rounded-full hover:bg-slate-100 p-2"
-            >
+            <button type="button" class="rounded-full hover:bg-slate-100 p-2">
               <svg
                 class="text-gray-700 h-7 w-7"
                 xmlns="http://www.w3.org/2000/svg"
@@ -160,10 +157,10 @@
             </button>
           </div>
 
-          <div >
+          <div class="col-span-2">
             <button
               type="button"
-              class="rounded-full hover:opacity-80"
+              class="rounded-full hover:opacity-80 aspect-square"
               id="user-menu-button"
               aria-expanded="false"
               aria-haspopup="true"
