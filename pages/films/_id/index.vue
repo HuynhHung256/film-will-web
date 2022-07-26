@@ -5,8 +5,12 @@
         <h1 class="text-4xl font-bold">TIMETABLE</h1>
         <p>Choose the cinema schedule that you will watch</p>
         <div class="flex my-5 flex-wrap">
-          <DateCard v-for="item in DateDetail" :date="item" :key="item.daymonth"
-            v-bind:class="dateSelected === item && 'card-active'"  />
+          <DateCard
+            v-for="item in DateDetail"
+            :date="item"
+            :key="item.daymonth"
+            v-bind:class="dateSelected === item && 'card-active'"
+          />
         </div>
       </div>
       <div>
@@ -15,22 +19,33 @@
           <h1 class="mx-5">HO CHI MINH</h1>
           <img src="../assets/images/vector-down.png" class="h-[10px]" />
         </div> -->
-        <div class="w-[60%]">
-          <h1 class="flex text-[24px] font-semibold items-center">
-            <img src="@/assets/images/Star.png" class="w-[32px] h-[32px] mr-3" />
-            HUNG VUONG PLAZA CGV
-          </h1>
-          <p>Floor 7, 126 Hung Vuong Street, 5 District, HCM City</p>
-          <TicketBook v-for="item in Ticket" :ticket="item" :key="item.type" @set-ticket="setTicket" />
+          <div class="w-[60%] mt-5">
+            <h1 class="flex text-[24px] font-semibold items-center">
+              <img
+                src="@/assets/images/Star.png"
+                class="w-[32px] h-[32px] mr-3"
+              />
+              HUNG VUONG PLAZA CGV
+            </h1>
+            <p>Floor 7, 126 Hung Vuong Street, 5 District, HCM City</p>
+            <TicketBook
+              v-for="item in Ticket"
+              :ticket="item"
+              :key="item.type"
+              @set-ticket="setTicket"
+            />
         </div>
       </div>
-      {{ this.timeSelected }}
+      <div class="mt-10">
+        <button class="bg-sky-900 rounded-lg py-4 w-full">
+          <h1 class="text-white font-semibold uppercase">choose seat</h1>
+        </button>
+      </div>
     </div>
     <div class="ml-[100px] w-[40%]">
       <FilmInfoCard :filmInfo="this.FilmInfo" :img="this.Img" class="mb-5" />
       <TicketCard :ticket="this.TicketCard" :infoSelected="InfoSelected" />
     </div>
-
   </div>
 </template>
 
@@ -40,13 +55,12 @@ import FilmInfoCard from "@/components/FilmInfoCard";
 import TicketBook from "@/components/TicketBook";
 import TicketCard from "@/components/TicketCard";
 
-
 export default {
   components: {
     DateCard,
     FilmInfoCard,
     TicketBook,
-    TicketCard
+    TicketCard,
   },
   data() {
     return {
@@ -57,42 +71,42 @@ export default {
         {
           daymonth: "13 July",
           kind: "WED",
-          value: "Wednesday, 13 July, 2022"
+          value: "Wednesday, 13 July, 2022",
         },
         {
           daymonth: "14 July",
           kind: "THU",
-          value: "Thursday, 14 July, 2022"
+          value: "Thursday, 14 July, 2022",
         },
         {
           daymonth: "15 July",
           kind: "FRI",
-          value: "Friday, 15 July, 2022"
+          value: "Friday, 15 July, 2022",
         },
         {
           daymonth: "16 July",
           kind: "SAT",
-          value: "Saturday, 16 July, 2022"
+          value: "Saturday, 16 July, 2022",
         },
         {
           daymonth: "17 July",
           kind: "SUN",
-          value: "Sunday, 17 July, 2022"
+          value: "Sunday, 17 July, 2022",
         },
         {
           daymonth: "18 July",
           kind: "MON",
-          value: "Monday, 18 July, 2022"
+          value: "Monday, 18 July, 2022",
         },
         {
           daymonth: "19 July",
           kind: "TUE",
-          value: "Tuesday, 19 July, 2022"
+          value: "Tuesday, 19 July, 2022",
         },
         {
           daymonth: "20 July",
           kind: "WED",
-          value: "Wednesday, 20 July, 2022"
+          value: "Wednesday, 20 July, 2022",
         },
       ],
       FilmInfo: {
@@ -133,17 +147,21 @@ export default {
         theater_name: "GRAND INDONESIA CGV",
         date: "Thursday, 16 December 2021",
         type: "REGULAR",
-        time: "14:40"
-      }
+        time: "14:40",
+      },
     };
   },
   methods: {
     setTicket(value) {
-      this.InfoSelected = { ...this.InfoSelected, time: value.time, type: value.type };
+      this.InfoSelected = {
+        ...this.InfoSelected,
+        time: value.time,
+        type: value.type,
+      };
     },
-    activeCard: function(value) {
+    activeCard: function (value) {
       console.log(value);
     },
-  }
+  },
 };
 </script>
