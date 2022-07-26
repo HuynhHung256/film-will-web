@@ -129,7 +129,7 @@
 
           <div class="">
             <NuxtLink
-              to="/my-ticket"
+              to="/account/tickets"
               class="
                 text-gray-600
                 hover:bg-gray-600 hover:text-white
@@ -189,7 +189,6 @@
 
           <div class="">
             <button
-              type="button"
               class="
                 text-gray-600
                 hover:bg-gray-600 hover:text-white

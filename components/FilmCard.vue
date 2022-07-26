@@ -1,4 +1,5 @@
 <template>
+<NuxtLink to="/films/14">
   <div class="bg-white">
     <div class="max-w-2xl mx-auto py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <h2 class="sr-only">Film</h2>
@@ -104,6 +105,7 @@
       </a>
     </div>
   </div>
+</NuxtLink>
 </template>
 
 <script>
