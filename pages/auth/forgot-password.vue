@@ -24,7 +24,7 @@
 
     <div class="col-span-2">
       <div class="w-full bg-white px-24 pb-10 pt-20 rounded-lg">
-        <h1 class="text-5xl font-semibold mb-16">Login to FILM WILL</h1>
+        <h1 class="text-5xl font-semibold mb-16">Reset Password</h1>
         <form
           id="login-form"
           class="w-9/12"
@@ -36,7 +36,7 @@
               class="block uppercase text-gray-900 text-xl font-light mb-2"
               for="email"
             >
-              Email
+              Your email address
             </label>
             <input
               class="
@@ -56,37 +56,7 @@
               v-model="email"
             />
           </div>
-          <div class="">
-            <label
-              class="block uppercase text-gray-900 text-xl font-light mb-2"
-              for="password"
-            >
-              Password
-            </label>
-            <input
-              class="
-                w-full
-                appearance-none
-                text-lg
-                border-b-2
-                py-2
-                px-3
-                text-gray-700
-                mb-3
-                leading-tight
-                focus:outline-none
-              "
-              id="password"
-              type="password"
-              placeholder="Enter Password"
-              v-model="password"
-            />
-          </div>
-          <div class="mb-12">
-            <nuxt-link to="#" class="inline-block text-sm">
-              Forgot Password? Reset Password
-            </nuxt-link>
-          </div>
+          
           <div class="mb-8">
             <button
               class="
@@ -103,29 +73,14 @@
               "
               type="submit"
             >
-              Sign In
+              Send new password
             </button>
           </div>
           <div class="mb-20">
-            <span class="text-sm text-center block mb-3">
-              New to FILM WILL?
+            <span class="text-sm text-left block mb-3">
+              New password will be sent to your email.
             </span>
-            <button
-              class="
-                w-full
-                border-2 border-sky-900
-                hover:bg-slate-50
-                text-sky-900 text-lg
-                font-bold
-                py-2
-                px-4
-                rounded-lg
-                focus:outline-none focus:shadow-outline
-              "
-              type="button"
-            >
-              Sign Up Now
-            </button>
+            
           </div>
         </form>
         <span class="text-sm font-medium">
@@ -137,7 +92,7 @@
 </template>
 <script>
 export default {
-  layout: "authentication",
+  layout: "forgotpassword",
   data() {
     return {
       email: "",
