@@ -134,7 +134,7 @@
           </div>
 
           <div>
-            <NuxtLink to="/paymentsuccessful">
+            <NuxtLink to="/films/14/paymentsuccessful">
             <button
               class="bg-slate-900 hover:bg-slate-600 text-xl text-yellow-500 rounded-md w-full py-4 font-bold mt-2">
               BUY TICKET

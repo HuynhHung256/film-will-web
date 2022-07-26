@@ -125,15 +125,11 @@
 <script>
 import FilmCard from "@/components/FilmCard"
 import NewsCard from "@/components/NewsCard"
-import ChevronRight from "@heroicons/vue/outline"
-import ChevronLeft from "@heroicons/vue/outline"
 
 export default {
   components: {
     FilmCard,
     NewsCard,
-    ChevronRight,
-    ChevronLeft
   },
   data() {
     return {

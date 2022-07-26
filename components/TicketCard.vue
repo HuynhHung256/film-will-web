@@ -11,7 +11,7 @@
       <p>{{ infoSelected.time }}</p>
     </div>
     <p>*Seat selection can be made after this</p>
-    <nuxt-link to="/payment">
+    <nuxt-link to="/films/14/choose-seat">
       <button
         class="text-white btn-color rounded-lg text-[20px] w-full py-4 font-bold mt-2"
       >
