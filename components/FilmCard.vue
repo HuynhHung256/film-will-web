@@ -35,7 +35,6 @@
               h-0
               flex flex-col-reverse
               items-center
-              justify-start
               bg-black
               opacity-0
               group-hover:h-full group-hover:opacity-80
@@ -52,14 +51,14 @@
                   mt-5
                   text-white text-center
                   xl:text-2xl
-                  md:text-lg
+                  lg:text-lg
                   font-semibold
                 "
               >
                 {{ film.name }}
               </h3>
             </div>
-            <div class="flex flex-row flex-wrap space-x-2">
+            <div class="flex lg:flex-row sm:flex-col  flex-wrap space-x-2 xl:scale-100 md:scale-75">
               <div
                 class="
                   w-fit

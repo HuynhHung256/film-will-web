@@ -1,16 +1,14 @@
 <template>
-  <div id="app" class="bg-slate-50">
-    <div id="nav-bar" 
-    class="fixed z-50 w-screen top-0"
-    >
+  <div id="app" class="scroll-smooth">
+    <header class="sticky z-50 top-0">
       <NavBar />
-    </div>
-    <div id="main" class="container mx-auto mt-32">
+    </header>
+    <main class="">
       <Nuxt />
-    </div>
-    <div id="footer" class="mt-40">
-      <Footer/>
-    </div>
+    </main>
+    <footer class="mt-40">
+      <Footer />
+    </footer>
   </div>
 </template>
 
@@ -20,7 +18,7 @@ import Footer from "@/components/Layouts/Footer.vue";
 export default {
   components: {
     NavBar,
-    Footer
+    Footer,
   },
 };
 </script>
