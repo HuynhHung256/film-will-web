@@ -1,0 +1,119 @@
+<template>
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 lg:py-8">
+      <div class="w-4/5 max-w-[858px] mx-auto">
+        <h1 class="text-5xl font-sans font-bold mt-10 mb-2 text-slate-800">
+          Spider-Man : No Way Home<br>
+          Releases New Trailer
+        </h1>
+        <h2 class="text-xl font-sans mt-8 mb-2 text-neutral-400">
+          17 Nov 2021 | FILM WILL
+        </h2>
+        <div class="w-full mt-16 max-w-[858px] flex justify-center">
+          <img class="rounded-lg" src="@/page html/html nguyen/component/movie/spidey.jpeg" alt="">
+        </div>
+        <div class="w-full mt-12 mb-32">
+          <p class="text-md font-sans mb-8">The pain itself is love, the main storage system. Laoreet quis vitae
+            molestie eleifend in. Proin downtown that's across the backyard. Pregnant vehicle age is now and, arrows in
+            the immune system. Pharetra teenagers need to pay bills. The famine loves this one who receives it and loves
+            it. They don't have makeup for the industry and. The curse of the arches and the hatred of the gridirons
+            Until the consequences of life and the consequences of adorning the front of the couch. Diam vitae neque
+            ridiculus diam at posuere volutpat. Until the kids are in the backyard.</p>
+          <p class="text-md font-sans mb-8">The vengeful comments of the laughter. In the desire to just eu and love
+            fusce lorem urna. Who but neither but the dus. Pure for teenagers but tomorrow, if not for life. Teenagers
+            hate the sickness of the throat. The guy in the free quiver hates Massage the torturer, hate the vengeful
+            cartoon.<br>
+            The bow is hated and not the Vikings Just in order, to hang up the throat of the sickness and want to be
+            easy. The film is not owned by the mass, right now. Selected element from the null. Commodus is a great old
+            age that is incredibly complicated. The arch of the throat is the author of the pure</p>
+          <p class="text-md font-sans mb-8">Who but the carton but the love and not the eu, the pain. The element of the
+            arrows in the entire earth is the place to start the crime. And now, no one wants to hate the lion and the
+            want of the gridiron. Nor is there no easy earth to be taken at the disease of the course. Venenatis at
+            bananas the author of that environment, urn. You can create any ugly smile.</p>
+        </div>
+        
+        <div class="w-full">
+          <p class="text-lg font-sans">Share this article</p>
+          <div class="flex relative justify-between w-[108px] mt-3.5">
+            <ul class="text-gray-600 dark:text-gray-400">
+              <span class="mb-8 flex space-x-4 scale-125 px-4">
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                </a>
+                <!--Twitter Icon-->
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                </a>
+                <!--FaceBook Icon-->
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+              </span>
+            </ul>
+          </div>
+
+          <div class="flex items-center mt-12 justify-center w-full">
+            <button class="grid grid-cols-2 w-auto border-2 rounded-full px-6 py-2 hover:border-slate-700 ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+              <p class="text-md">402</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!--3 tab pages news-->
+      <div class="w-full mt-10 relative">
+        <p class="text-center text-4xl font-sans">See Other Articles</p>
+        
+        <div class="flex space-x-1 grid grid-cols-3 gap-4 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 lg:py-16">
+          <div class="rounded-md p-2 hover:bg-gray-100">
+            <img class="rounded-lg bg-fixed bg-center" src="@/page html/html nguyen/component/movie/Spiderman.png" alt="#">
+            <div class="py-4 space-y-2">
+              <div class="border border-slate-900 w-1/6 text-center font-medium text-md py-1">News</div>
+              <div class="font-bold text-2xl max-w-3xl">Ghostbusters: Afterlife Comes Featuring New Ghost Variations</div>
+              
+              <div class="flex text-lg space-x-2">
+                <div class="day">08</div>
+                <div class="month">Nov</div>
+                <div class="year">2021 </div>
+                <div class="brand">| Film WILL</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rounded-md p-2 hover:bg-gray-100">
+            <img class="rounded-lg bg-fixed bg-center" src="@/page html/html nguyen/component/movie/Spiderman.png" alt="#">
+            <div class="py-4 space-y-2">
+              <div class="border border-slate-900 w-1/6 text-center font-medium text-md py-1">News</div>
+              <div class="font-bold text-2xl max-w-3xl">House of Gucci: The Story of Gucci's Sole Heir in 1955.</div>
+              
+              <div class="flex text-lg space-x-2">
+                <div class="day">17</div>
+                <div class="month">Nov</div>
+                <div class="year">2021 </div>
+                <div class="brand">| Film WILL</div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="rounded-md p-2 hover:bg-gray-100">
+            <img class="rounded-lg bg-fixed bg-center" src="@/page html/html nguyen/component/movie/Spiderman.png" alt="#">
+            <div class="py-4 space-y-2">
+              <div class="border border-slate-900 w-1/6 text-center font-medium text-md py-1">News</div>
+              <div class="font-bold text-2xl max-w-3xl">Donnie Yen's Action in the Latest Hong Kong Action Film</div>
+              
+              <div class="flex text-lg space-x-2">
+                <div class="day">17</div>
+                <div class="month">Nov</div>
+                <div class="year">2021 </div>
+                <div class="brand">| Film WILL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</template>

@@ -1,56 +1,123 @@
 <template>
-<div class="flex">
-  <div class="w-[30%] flex flex-col">
-    <a href="#" class="py-3 border-b-2 ml-[100px] font-semibold text-[18px] hover:text-blue-500 flex items-center">
+  <div class="flex mt-10">
+    <div class="w-[30%] flex flex-col">
+      <a
+        href="#"
+        class="
+          py-3
+          border-b-2
+          ml-[100px]
+          font-semibold
+          text-[18px]
+          hover:text-blue-500
+          flex
+          items-center
+        "
+      >
         <img src="~/assets/images/ticket.svg" />
         ACTIVE TICKET
-    </a>
-    <a href="#" class="py-3 border-b-2 ml-[100px] font-semibold text-[18px] hover:text-blue-500 flex items-center">
+      </a>
+      <a
+        href="#"
+        class="
+          py-3
+          border-b-2
+          ml-[100px]
+          font-semibold
+          text-[18px]
+          hover:text-blue-500
+          flex
+          items-center
+        "
+      >
         <img src="~/assets/images/transaction.svg" />
         TRANSACTION LIST
-    </a>
-  </div>
-  <div class="bg-white w-[100%] pl-[100px]">
-    <h1 class="font-semibold text-[30px]">My Ticket</h1>
-    <p>List of tickets and transactions you've done</p>
-    <div class="mt-5">
-        <span class="border rounded-lg px-5 py-2 shadow hover:border-blue-500 hover:text-blue-500 cursor-pointer">Film</span>
-        <span class="border rounded-lg px-5 py-2 shadow hover:border-blue-500 hover:text-blue-500 cursor-pointer">Event</span>
-        <span class="border rounded-lg px-5 py-2 shadow hover:border-blue-500 hover:text-blue-500 cursor-pointer">Voucher</span>
+      </a>
     </div>
+    <div class="bg-white w-[100%] pl-[100px]">
+      <h1 class="font-semibold text-[30px]">My Ticket</h1>
+      <p>List of tickets and transactions you've done</p>
+      <div class="mt-5">
+        <span
+          class="
+            border
+            rounded-lg
+            px-5
+            py-2
+            shadow
+            hover:border-blue-500 hover:text-blue-500
+            cursor-pointer
+          "
+          >Film</span
+        >
+        <span
+          class="
+            border
+            rounded-lg
+            px-5
+            py-2
+            shadow
+            hover:border-blue-500 hover:text-blue-500
+            cursor-pointer
+          "
+          >Event</span
+        >
+        <span
+          class="
+            border
+            rounded-lg
+            px-5
+            py-2
+            shadow
+            hover:border-blue-500 hover:text-blue-500
+            cursor-pointer
+          "
+          >Voucher</span
+        >
+      </div>
 
-    <div class="w-[80%]">
-        <div v-for="f in 4" :key="f" class="flex items-center py-10 border-b-2 justify-between">
-            <div class="flex items-center">  
-                <img :src=films[f].img class="w-[200px] h-[250px]" />
-                <div class="ml-5">
-                    <h1 class="font-semibold text-[25px]">{{ films[f].name }}</h1>
-                    <p>{{ films[f].datetime }}</p>
-                    <div class="flex items-center">
-                        <div class="text-slate-500 flex items-center">
-                            <img src="~/assets/images/location.png" />
-                            {{ films[f].place }}
-                        </div>
-                        <p class="font-semibold ml-2">{{ films[f].type }}</p>
-                    </div>
+      <div class="w-[80%]">
+        <NuxtLink
+          to="/account/tickets/14"
+          v-for="f in 4"
+          :key="f"
+          class="flex items-center py-10 border-b-2 justify-between"
+        >
+          <div class="flex items-center">
+            <img :src="films[f].img" class="w-[200px] h-[250px]" />
+            <div class="ml-5">
+              <h1 class="font-semibold text-[25px]">{{ films[f].name }}</h1>
+              <p>{{ films[f].datetime }}</p>
+              <div class="flex items-center">
+                <div class="text-slate-500 flex items-center">
+                  <img src="~/assets/images/location.png" />
+                  {{ films[f].place }}
                 </div>
+                <p class="font-semibold ml-2">{{ films[f].type }}</p>
+              </div>
+            </div>
           </div>
-        
-          <button v-if="films[f].status" class="bg-blue-500 px-5 py-2 text-white rounded ">Succeed</button>
-          <button v-else class="bg-red-500 px-5 py-2 text-white rounded ">Failed</button>
-        </div>
+
+          <button
+            v-if="films[f].status"
+            class="bg-blue-500 px-5 py-2 text-white rounded"
+          >
+            Succeed
+          </button>
+          <button v-else class="bg-red-500 px-5 py-2 text-white rounded">
+            Failed
+          </button>
+        </NuxtLink>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-
-
 export default {
   data() {
     return {
-      films:[
+      films: [
         {
           id: 1,
           name: "The Shawshank Redemption",
@@ -58,7 +125,7 @@ export default {
           datetime: "Thursday, 16 Desember 2021, 14:40",
           place: "Hung Vuong Plaza CGV",
           type: "( Regular 2D)",
-          status: 1
+          status: 1,
         },
         {
           id: 2,
@@ -67,7 +134,7 @@ export default {
           datetime: "Thursday, 16 Desember 2021, 14:40",
           place: "Hung Vuong Plaza CGV",
           type: "( Regular 2D)",
-          status: 1
+          status: 1,
         },
         {
           id: 3,
@@ -76,7 +143,7 @@ export default {
           datetime: "Thursday, 16 Desember 2021, 14:40",
           place: "Hung Vuong Plaza CGV",
           type: "( Regular 2D)",
-          status: 0
+          status: 0,
         },
         {
           id: 4,
@@ -85,7 +152,7 @@ export default {
           datetime: "Thursday, 16 Desember 2021, 14:40",
           place: "Hung Vuong Plaza CGV",
           type: "( Regular 2D)",
-          status: 0
+          status: 0,
         },
         {
           id: 5,
@@ -94,11 +161,10 @@ export default {
           datetime: "Thursday, 16 Desember 2021, 14:40",
           place: "Hung Vuong Plaza CGV",
           type: "( Regular 2D)",
-          status: 1
+          status: 1,
         },
       ],
-    }
-  }
-}
-
+    };
+  },
+};
 </script>
