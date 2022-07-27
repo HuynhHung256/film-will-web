@@ -60,7 +60,7 @@
               "
             >
               <input
-                class="text-base w-5/6"
+                class="text-base w-5/6 focus:outline-none"
                 type="text"
                 placeholder="Search Post"
               />

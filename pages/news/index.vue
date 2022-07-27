@@ -8,7 +8,7 @@
       <div class="flex my-4 space-x-6">
         <div class="flex border-2 rounded-md px-4 py-1 w-2/5 space-x-12">
           <input
-            class="text-base w-5/6"
+            class="text-base w-5/6 focus:outline-none"
             type="text"
             placeholder="Search Post"
           />
