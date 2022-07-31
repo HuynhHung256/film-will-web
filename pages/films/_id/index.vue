@@ -1,7 +1,7 @@
 <template>
   <div class="flex mx-36 my-10">
     <div>
-      <div class="border-b-2">
+      <div class="border-b-2 w-[90%]">
         <h1 class="text-4xl font-bold">TIMETABLE</h1>
         <p>Choose the cinema schedule that you will watch</p>
         <div class="flex my-5 flex-wrap">
@@ -120,7 +120,7 @@
         </button>
       </div> -->
     </div>
-    <div class="ml-[100px] w-[40%]">
+    <div class="w-[50%]">
       <FilmInfoCard :filmInfo="this.FilmInfo" :img="this.Img" class="mb-5" />
       <TicketCard :ticket="this.TicketCard" :infoSelected="InfoSelected" />
     </div>
@@ -185,6 +185,36 @@ export default {
           daymonth: "20 July",
           kind: "WED",
           value: "Wednesday, 20 July, 2022",
+        },
+        {
+          daymonth: "21 July",
+          kind: "THU",
+          value: "Thursday, 21 July, 2022",
+        },
+        {
+          daymonth: "22 July",
+          kind: "FRI",
+          value: "Friday, 22 July, 2022",
+        },
+        {
+          daymonth: "23 July",
+          kind: "SAT",
+          value: "Saturday, 23 July, 2022",
+        },
+        {
+          daymonth: "24 July",
+          kind: "SUN",
+          value: "Sunday, 24 July, 2022",
+        },
+        {
+          daymonth: "25 July",
+          kind: "MON",
+          value: "Monday, 25 July, 2022",
+        },
+        {
+          daymonth: "26 July",
+          kind: "TUE",
+          value: "Tuesday, 26 July, 2022",
         },
       ],
       FilmInfo: {

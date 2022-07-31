@@ -1,10 +1,10 @@
 <template>
   <div class="mt-5">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center">
       <h1 class="text-[20px] font-medium text-primary">
         {{ ticket.type }}
       </h1>
-      <p class="text-[18px] text-red-500 mr-4">
+      <p class="text-[18px] text-red-500 ml-3">
         Price: {{ formatCurrency(ticket.price) }} VND
       </p>
     </div>
