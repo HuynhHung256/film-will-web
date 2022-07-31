@@ -110,22 +110,24 @@
             <span class="text-sm text-center block mb-3">
               New to FILM WILL?
             </span>
-            <button
-              class="
-                w-full
-                border-2 border-sky-900
-                hover:bg-slate-50
-                text-sky-900 text-lg
-                font-bold
-                py-2
-                px-4
-                rounded-lg
-                focus:outline-none focus:shadow-outline
-              "
-              type="button"
-            >
-              Sign Up Now
-            </button>
+            <NuxtLink to="/auth/signup">
+              <button
+                class="
+                  w-full
+                  border-2 border-sky-900
+                  hover:bg-slate-50
+                  text-sky-900 text-lg
+                  font-bold
+                  py-2
+                  px-4
+                  rounded-lg
+                  focus:outline-none focus:shadow-outline
+                "
+                type="button"
+              >
+                Sign Up Now
+              </button>
+            </NuxtLink>
           </div>
         </form>
         <span class="text-sm font-medium">
