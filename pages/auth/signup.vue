@@ -24,7 +24,7 @@
 
     <div class="col-span-2">
       <div class="w-9/12 bg-white px-16 pb-10 pt-20 rounded-lg">
-        <h1 class="text-4xl font-semibold mb-8 text-center">REGISTER TO FILM WILL</h1>
+        <h1 class="text-4xl font-semibold mb-16 text-center">REGISTER TO FILM WILL</h1>
         <form
           id="login-form"
           class=""
