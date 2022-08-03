@@ -23,11 +23,11 @@
     </div>
 
     <div class="col-span-2">
-      <div class="w-full bg-white px-24 pb-10 pt-20 rounded-lg">
+      <div class="w-9/12 bg-white px-24 pb-10 pt-20 rounded-lg">
         <h1 class="text-5xl font-semibold mb-16">Login to FILM WILL</h1>
         <form
           id="login-form"
-          class="w-9/12"
+          class="w-full"
           @submit.prevent="login"
           @keydown.enter.prevent="login"
         >

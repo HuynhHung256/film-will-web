@@ -23,11 +23,11 @@
     </div>
 
     <div class="col-span-2">
-      <div class="w-full bg-white px-24 pb-10 pt-20 rounded-lg">
-        <h1 class="text-5xl font-semibold mb-16">Register to FILM WILL</h1>
+      <div class="w-9/12 bg-white px-24 pb-10 pt-20 rounded-lg">
+        <h1 class="text-4xl font-semibold mb-8">REGISTER TO FILM WILL</h1>
         <form
           id="login-form"
-          class="w-9/12"
+          class=""
           @submit.prevent="login"
           @keydown.enter.prevent="login"
         >
@@ -119,6 +119,7 @@
                 font-bold
                 py-2
                 px-4
+                mt-8
                 rounded-lg
                 focus:outline-none focus:shadow-outline
               "
