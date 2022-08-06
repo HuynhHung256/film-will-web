@@ -1,6 +1,6 @@
 <template>
   <div id="hompage" class="">
-    <div id="banner" class="">
+    <div id="banner" class="w-screen">
       <carousel
         :per-page="1"
         :mouse-drag="false"
@@ -20,19 +20,17 @@
             :src="b"
             class="
               w-full
-              aspect-[4/1]
+              aspect-[6/1]
               object-center object-cover
-              group-hover:opacity-75
-              rounded-md
             "
           />
         </slide>
       </carousel>
     </div>
     <div class="xl:px-32 lg:px-16 md:px-6">
-      <div id="film-slider" class="mt-20 mx-10">
+      <div id="film-slider" class="mt-20 mx-32">
         <carousel
-          :per-page="3"
+          :per-page="4"
           :mouse-drag="false"
           :autoplay="true"
           :loop="true"
@@ -58,9 +56,15 @@
             <FilmCard :film="film" />
           </slide>
         </carousel>
+        <!-- View All -->
+        <!-- <div class="flex justify-center">
+          <button class="bg-gray-50 py-2 px-3 text-lg font-semibold text-gray-600 shadow-md hover:bg-gray-100 rounded-full ">
+            Show All
+          </button>
+        </div> -->
       </div>
 
-      <div id="film-news" class="mt-20 mx-10">
+      <div id="film-news" class="mt-20 mx-32">
         <div class="grid grid-cols-2 place-items-center">
           <div class="place-self-start">
             <h2 class="text-3xl">FilmWill news</h2>
@@ -69,15 +73,15 @@
             </p>
           </div>
           <div class="place-self-end">
-            <a
-              href="#"
+            <NuxtLink
+              to="/news"
               class="
                 text-xl text-blue-400
                 hover:underline hover:underline-offset-4
               "
             >
               View All
-            </a>
+            </NuxtLink>
           </div>
         </div>
         <div class="grid grid-cols-3 gap-4 mt-10">
@@ -86,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div id="film-news" class="mt-20 mx-10">
+      <div id="film-news" class="mt-20 mx-32">
         <div class="grid grid-cols-2 place-items-center">
           <div class="place-self-start">
             <h2 class="text-3xl">In Future</h2>
@@ -95,19 +99,19 @@
             </p>
           </div>
           <div class="place-self-end">
-            <a
-              href="#"
+            <NuxtLink
+              to="/films"
               class="
                 text-xl text-blue-400
                 hover:underline hover:underline-offset-4
               "
             >
               View All
-            </a>
+            </NuxtLink>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-4 mt-10">
-          <div v-for="film_id in 3" :key="film_id">
+        <div class="grid grid-cols-4 gap-4 mt-10">
+          <div v-for="film_id in 4" :key="film_id">
             <FilmCard :film="films[film_id]" />
           </div>
         </div>
@@ -116,11 +120,6 @@
   </div>
 </template>
 
-<style scoped>
-#banner {
-  padding-left: 0
-}
-</style>
 
 <script>
 import FilmCard from "@/components/FilmCard"

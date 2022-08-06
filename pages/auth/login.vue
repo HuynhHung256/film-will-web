@@ -148,11 +148,13 @@ export default {
   },
   methods: {
     login() {
-      console.log("login");
-      // this.$store.dispatch("auth/login", {
-      //   email: this.$refs.email.value,
-      //   password: this.$refs.password.value,
-      // });
+      this.$store.dispatch("auth/login", {
+        email: this.email,
+        password: this.password,
+      });
+      if (this.$store.getters["auth/isLogin"]) {
+        this.$router.push("/");
+      }
     },
   },
 };

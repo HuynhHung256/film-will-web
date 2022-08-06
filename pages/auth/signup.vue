@@ -1,5 +1,5 @@
 <template>
-  <div id="login" class="grid xl:grid-cols-3 md:grid-cols-1 py-24 px-32">
+  <div id="signup" class="grid xl:grid-cols-3 md:grid-cols-1 py-24 px-32">
     <div class="col-span-1 mb-6">
       <button class="px-3 py-1 hover:underline scale-125">
         <NuxtLink to="/" class="text-white">
@@ -26,10 +26,10 @@
       <div class="w-9/12 bg-white px-16 pb-10 pt-20 rounded-lg">
         <h1 class="text-4xl font-semibold mb-16 text-center">REGISTER TO FILM WILL</h1>
         <form
-          id="login-form"
+          id="signup-form"
           class=""
-          @submit.prevent="login"
-          @keydown.enter.prevent="login"
+          @submit.prevent="signup"
+          @keydown.enter.prevent="signup"
         >
           <div class="mb-10">
             <label
@@ -146,9 +146,9 @@ export default {
     };
   },
   methods: {
-    login() {
-      console.log("login");
-      // this.$store.dispatch("auth/login", {
+    signup() {
+      
+      // this.$store.dispatch("auth/signup", {
       //   email: this.$refs.email.value,
       //   password: this.$refs.password.value,
       // });

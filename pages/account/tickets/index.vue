@@ -1,8 +1,7 @@
 <template>
   <div class="flex mt-10">
     <div class="w-[30%] flex flex-col">
-      <a
-        href="#"
+      <button
         class="
           py-3
           border-b-2
@@ -13,12 +12,15 @@
           flex
           items-center
         "
+        :style="{
+          color: active ? '#3B82F6' : '',
+        }"
+        @click="active = true"
       >
         <img src="~/assets/images/ticket.svg" />
         ACTIVE TICKET
-      </a>
-      <a
-        href="#"
+      </button>
+      <button
         class="
           py-3
           border-b-2
@@ -29,85 +31,157 @@
           flex
           items-center
         "
+        :style="{
+          color: active ? '' : '#3B82F6',
+        }"
+        @click="active = false"
       >
         <img src="~/assets/images/transaction.svg" />
         TRANSACTION LIST
-      </a>
+      </button>
     </div>
     <div class="bg-white w-[100%] pl-[100px]">
-      <h1 class="font-semibold text-[30px]">My Ticket</h1>
-      <p>List of tickets and transactions you've done</p>
-      <div class="mt-5">
-        <span
-          class="
-            border
-            rounded-lg
-            px-5
-            py-2
-            shadow
-            hover:border-blue-500 hover:text-blue-500
-            cursor-pointer
-          "
-          >Film</span
-        >
-        <span
-          class="
-            border
-            rounded-lg
-            px-5
-            py-2
-            shadow
-            hover:border-blue-500 hover:text-blue-500
-            cursor-pointer
-          "
-          >Event</span
-        >
-        <span
-          class="
-            border
-            rounded-lg
-            px-5
-            py-2
-            shadow
-            hover:border-blue-500 hover:text-blue-500
-            cursor-pointer
-          "
-          >Voucher</span
-        >
-      </div>
+      <div v-if="!active">
+        <h1 class="font-semibold text-[30px]">My Ticket</h1>
+        <p>List of tickets and transactions you've done</p>
+        <div class="mt-5">
+          <span
+            class="
+              border
+              rounded-lg
+              px-5
+              py-2
+              shadow
+              hover:border-blue-500 hover:text-blue-500
+              cursor-pointer
+            "
+            >Film</span
+          >
+          <span
+            class="
+              border
+              rounded-lg
+              px-5
+              py-2
+              shadow
+              hover:border-blue-500 hover:text-blue-500
+              cursor-pointer
+            "
+            >Event</span
+          >
+          <span
+            class="
+              border
+              rounded-lg
+              px-5
+              py-2
+              shadow
+              hover:border-blue-500 hover:text-blue-500
+              cursor-pointer
+            "
+            >Voucher</span
+          >
+        </div>
 
-      <div class="w-[80%]">
-        <NuxtLink
-          to="/account/tickets/14"
-          v-for="f in 4"
-          :key="f"
-          class="flex items-center py-10 border-b-2 justify-between"
-        >
-          <div class="flex items-center">
-            <img :src="films[f].img" class="w-[200px] h-[250px]" />
-            <div class="ml-5">
-              <h1 class="font-semibold text-[25px]">{{ films[f].name }}</h1>
-              <p>{{ films[f].datetime }}</p>
-              <div class="flex items-center">
-                <div class="text-slate-500 flex items-center">
-                  <img src="~/assets/images/location.png" />
-                  {{ films[f].place }}
+        <div class="w-[80%]">
+          <NuxtLink
+            to="/account/tickets/14"
+            v-for="f in 4"
+            :key="f"
+            class="flex items-center py-10 border-b-2 justify-between"
+          >
+            <div class="flex items-center">
+              <img :src="films[f].img" class="w-[200px] h-[250px]" />
+              <div class="ml-5">
+                <h1 class="font-semibold text-[25px]">{{ films[f].name }}</h1>
+                <p>{{ films[f].datetime }}</p>
+                <div class="flex items-center">
+                  <div class="text-slate-500 flex items-center">
+                    <img src="~/assets/images/location.png" />
+                    {{ films[f].place }}
+                  </div>
+                  <p class="font-semibold ml-2">{{ films[f].type }}</p>
                 </div>
-                <p class="font-semibold ml-2">{{ films[f].type }}</p>
               </div>
             </div>
-          </div>
 
-          <button
-            v-if="films[f].status"
-            class="bg-blue-500 px-5 py-2 text-white rounded"
+            <button
+              v-if="films[f].status"
+              class="bg-blue-500 px-5 py-2 text-white rounded"
+            >
+              Succeed
+            </button>
+            <button v-else class="bg-red-500 px-5 py-2 text-white rounded">
+              Failed
+            </button>
+          </NuxtLink>
+        </div>
+      </div>
+      <div v-if="active">
+        <h1 class="font-semibold text-[30px]">My Ticket</h1>
+        <p>List of tickets and transactions you've done</p>
+        <div class="mt-5">
+          <span
+            class="
+              border
+              rounded-lg
+              px-5
+              py-2
+              shadow
+              hover:border-blue-500 hover:text-blue-500
+              cursor-pointer
+            "
+            >Film</span
           >
-            Succeed
-          </button>
-          <button v-else class="bg-red-500 px-5 py-2 text-white rounded">
-            Failed
-          </button>
-        </NuxtLink>
+          <span
+            class="
+              border
+              rounded-lg
+              px-5
+              py-2
+              shadow
+              hover:border-blue-500 hover:text-blue-500
+              cursor-pointer
+            "
+            >Event</span
+          >
+          <span
+            class="
+              border
+              rounded-lg
+              px-5
+              py-2
+              shadow
+              hover:border-blue-500 hover:text-blue-500
+              cursor-pointer
+            "
+            >Voucher</span
+          >
+        </div>
+
+        <div class="w-[80%]">
+          <NuxtLink
+            to="/account/tickets/14"
+            v-for="f in 4"
+            :key="f"
+            class="flex items-center py-10 border-b-2 justify-between"
+          >
+            <div class="flex items-center">
+              <img :src="films[f].img" class="w-[200px] h-[250px]" />
+              <div class="ml-5">
+                <h1 class="font-semibold text-[25px]">{{ films[f].name }}</h1>
+                <p>{{ films[f].datetime }}</p>
+                <div class="flex items-center">
+                  <div class="text-slate-500 flex items-center">
+                    <img src="~/assets/images/location.png" />
+                    {{ films[f].place }}
+                  </div>
+                  <p class="font-semibold ml-2">{{ films[f].type }}</p>
+                </div>
+              </div>
+            </div>
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </div>
@@ -117,6 +191,7 @@
 export default {
   data() {
     return {
+      active: true,
       films: [
         {
           id: 1,
@@ -164,7 +239,8 @@ export default {
           status: 1,
         },
       ],
-    };
+    }
   },
-};
+}
 </script>
+
