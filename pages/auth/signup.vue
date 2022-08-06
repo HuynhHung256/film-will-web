@@ -2,7 +2,7 @@
   <div id="signup" class="grid xl:grid-cols-3 md:grid-cols-1 py-24 px-32">
     <div class="col-span-1 mb-6">
       <button class="px-3 py-1 hover:underline scale-125">
-        <NuxtLink to="/" class="text-white">
+        <NuxtLink to="/auth/login" class="text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 inline mr-3 mb-1"

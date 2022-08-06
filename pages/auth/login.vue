@@ -83,7 +83,7 @@
             />
           </div>
           <div class="mb-12">
-            <nuxt-link to="#" class="inline-block text-sm">
+            <nuxt-link to="/auth/forgot-password" class="inline-block text-sm">
               Forgot Password? Reset Password
             </nuxt-link>
           </div>

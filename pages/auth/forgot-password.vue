@@ -2,7 +2,7 @@
   <div id="login" class="grid xl:grid-cols-3 md:grid-cols-1 py-24 px-32">
     <div class="col-span-1 mb-6">
       <button class="px-3 py-1 hover:underline scale-125">
-        <NuxtLink to="/" class="text-white">
+        <NuxtLink to="/auth/login" class="text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 inline mr-3 mb-1"
@@ -23,7 +23,7 @@
     </div>
 
     <div class="col-span-2">
-      <div class="w-full bg-white px-24 pb-10 pt-20 rounded-lg">
+      <div class="bg-white px-24 pb-10 pt-20 rounded-lg w-2/3 ml-16">
         <h1 class="text-5xl font-semibold mb-16">Reset Password</h1>
         <form
           id="login-form"
