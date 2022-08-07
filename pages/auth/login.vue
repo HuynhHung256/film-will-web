@@ -82,6 +82,10 @@
               v-model="password"
             />
           </div>
+          <div class="text-red-800 mb-3">
+            {{ error }}
+          </div>
+
           <div class="mb-12">
             <nuxt-link to="/auth/forgot-password" class="inline-block text-sm">
               Forgot Password? Reset Password
@@ -130,9 +134,7 @@
             </NuxtLink>
           </div>
         </form>
-        <span class="text-sm font-medium">
-          2022 FILM WILL - Group 14
-        </span>
+        <span class="text-sm font-medium"> 2022 FILM WILL - Group 14 </span>
       </div>
     </div>
   </div>
@@ -144,18 +146,18 @@ export default {
     return {
       email: "",
       password: "",
-    };
+      error: "",
+    }
   },
   methods: {
     login() {
       this.$store.dispatch("auth/login", {
         email: this.email,
         password: this.password,
-      });
-      if (this.$store.getters["auth/isLogin"]) {
-        this.$router.push("/");
-      }
+      })
+      if (this.$store.getters["auth/isLogin"]) this.$router.push("/")
+      else this.error = "Invalid email or password"
     },
   },
-};
+}
 </script>

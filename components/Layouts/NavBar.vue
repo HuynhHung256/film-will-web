@@ -359,26 +359,26 @@ export default {
       ],
       active: false,
       search: "",
-    };
+    }
   },
   computed: {
     isLogin() {
-      return this.$store.getters["auth/isLogin"];
+      return this.$store.getters["auth/isLogin"]
     },
   },
   methods: {
     toggleMenu() {
-      this.dropdown = !this.dropdown;
-      console.log(this.dropdown);
+      this.dropdown = !this.dropdown
+      console.log(this.dropdown)
     },
     logout() {
-      this.$store.dispatch("auth/logout");
+      this.$store.dispatch("auth/logout")
       // this.$router.push("/")
     },
     search_films() {
-      this.$router.push("/films/?search=" + this.search);
+      this.$router.push("/films/?search=" + this.search)
     
     },
   },
-};
+}
 </script>

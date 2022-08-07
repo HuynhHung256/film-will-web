@@ -97,16 +97,16 @@ export default {
     return {
       email: "",
       password: "",
-    };
+    }
   },
   methods: {
     login() {
-      console.log("login");
+      console.log("login")
       // this.$store.dispatch("auth/login", {
       //   email: this.$refs.email.value,
       //   password: this.$refs.password.value,
-      // });
+      // })
     },
   },
-};
+}
 </script>

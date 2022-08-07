@@ -278,7 +278,7 @@
     </div>
 </template>
 <script>
-import FilmCard from "@/components/FilmCard";
+import FilmCard from "@/components/FilmCard"
 export default {
   props: {
     type: {
@@ -292,7 +292,7 @@ export default {
   data() {
     return {
       films: []
-    };
+    }
   },
   fetch(){
     // if (this.type === 'playing')

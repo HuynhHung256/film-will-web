@@ -143,7 +143,7 @@ export default {
     return {
       email: "",
       password: "",
-    };
+    }
   },
   methods: {
     signup() {
@@ -151,8 +151,8 @@ export default {
       // this.$store.dispatch("auth/signup", {
       //   email: this.$refs.email.value,
       //   password: this.$refs.password.value,
-      // });
+      // })
     },
   },
-};
+}
 </script>

@@ -103,9 +103,12 @@
             font-sans
             text-2xl
             font-bold
+            cursor-default
           "
         >
+        <h1>
           Cinema Screen Here
+        </h1>
         </div>
         <div class="flex width-full mx-20 mt-14">
           <div class="flex w-1/2">
@@ -114,6 +117,7 @@
           </div>
           <div class="flex w-1/2 justify-end">
             <div class="w-1/2">
+            <NuxtLink to= "/films/14">
               <button
                 class="
                   return
@@ -133,6 +137,7 @@
               >
                 RETURN
               </button>
+            </NuxtLink>
             </div>
             <div class="w-1/2">
               <NuxtLink to="/films/14/payment">
@@ -183,7 +188,7 @@
   width: 15px;
   height: 15px;
   background: #fff;
-  border: 1px solid #bada55;
+  border: 1px solid #4B5563;
   left: -2px;
   bottom: 5px;
 }

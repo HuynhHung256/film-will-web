@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import FilmList from "@/components/FilmList";
+import FilmList from "@/components/FilmList"
 export default {
   components: {
     FilmList,
@@ -22,7 +22,7 @@ export default {
         limit: 10,
         search: this.$route.query.search || "",
       },
-    };
+    }
   },
-};
+}
 </script>

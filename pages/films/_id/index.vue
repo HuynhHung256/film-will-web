@@ -128,10 +128,10 @@
 </template>
 
 <script>
-import DateCard from "@/components/DateCard";
-import FilmInfoCard from "@/components/FilmInfoCard";
-import TicketBook from "@/components/TicketBook";
-import TicketCard from "@/components/TicketCard";
+import DateCard from "@/components/DateCard"
+import FilmInfoCard from "@/components/FilmInfoCard"
+import TicketBook from "@/components/TicketBook"
+import TicketCard from "@/components/TicketCard"
 
 export default {
   components: {
@@ -257,7 +257,7 @@ export default {
         type: "REGULAR",
         time: "14:40",
       },
-    };
+    }
   },
   methods: {
     setTicket(value) {
@@ -265,11 +265,11 @@ export default {
         ...this.InfoSelected,
         time: value.time,
         type: value.type,
-      };
+      }
     },
     activeCard: function (value) {
-      console.log(value);
+      console.log(value)
     },
   },
-};
+}
 </script>
