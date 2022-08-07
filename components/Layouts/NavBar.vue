@@ -29,15 +29,10 @@
               src="@/assets/images/logos/logo1.png"
               alt=""
             />
-            <!-- <img
-                  class="hidden lg:block h-10 w-10"
-                  src="@/assets/images/logos/logo1.png"
-                  alt=""
-                /> -->
           </NuxtLink>
         </div>
         <div class="col-span-4">
-          <form class="w-fit">
+          <form class="w-fit" @submit.stop.prevent="search_films">
             <label for="simple-search" class="sr-only">Search</label>
             <div class="relative">
               <div
@@ -67,7 +62,6 @@
               </div>
               <input
                 type="text"
-                id="simple-search"
                 class="
                   border border-gray-400
                   text-gray-900 text-sm
@@ -78,8 +72,8 @@
                   pl-10
                   p-1.5
                 "
+                v-model="search"
                 placeholder="Search"
-                required=""
               />
             </div>
           </form>
@@ -364,6 +358,7 @@ export default {
         { name: "Sign out", href: "#" },
       ],
       active: false,
+      search: "",
     };
   },
   computed: {
@@ -379,6 +374,10 @@ export default {
     logout() {
       this.$store.dispatch("auth/logout");
       // this.$router.push("/")
+    },
+    search_films() {
+      this.$router.push("/films/?search=" + this.search);
+    
     },
   },
 };
