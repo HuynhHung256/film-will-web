@@ -4,38 +4,60 @@
       {{ ticket.theater_name }}
     </h1>
     <p class="text-[18px] text-primary mb-2">
-      {{ ticket.date }}
+      {{ ticket.value }}
     </p>
     <div class="flex text-[20px] font-medium justify-between mb-3">
-      <h1>{{ infoSelected.type }}</h1>
-      <p>{{ infoSelected.time }}</p>
+      <h1>{{ ticket.type }}</h1>
+      <p>{{ ticket.time }}</p>
     </div>
     <p>*Seat selection can be made after this</p>
-    <nuxt-link to="/films/14/choose-seat">
+    
       <button
         class="text-white btn-color rounded-lg text-[20px] w-full py-4 font-bold mt-2"
+        @click ="goNext"
       >
         BUY NOW
       </button>
-    </nuxt-link>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    ticket: {
-      type: Object,
-      required: true,
-    },
-    infoSelected: {
-      type: Object,
-      required: true,
-    },
+  data () {
+    return {
+      ticket: {
+        ...this.$store.getters["ticket/ticket"]
+      },
+    }
   },
   methods: {
- 
+    clearTicket(){
+      delete this.ticket.time,
+      delete this.ticket.type,
+      delete this.ticket.theater_name,
+      delete this.ticket.date,
+      delete this.ticket.price,
+      delete this.ticket.seat,
+      delete this.ticket.movie
+    },
+    loadingStore(){
+      const val = {...this.$store.getters["ticket/ticket"]}
+      this.ticket = val
+      console.log("ticket", val)
+    },
+    goNext() {
+      console.log("TICKET: ", this.ticket)
+      const val = {...this.$store.getters["ticket/ticket"]}
+      this.ticket = val
+      console.log("VAL: ", this.ticket)
+
+      // this.$router.push({
+      //   name: "choose-seat",
+      //   params: {
+      //     id: this.$route.params.id,
+      //   },
+      // })
+    },
   },
-  //
 }
 </script>

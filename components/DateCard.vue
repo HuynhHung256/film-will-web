@@ -15,13 +15,15 @@ export default {
       type: Object,
       required: true,
     },
-    activeCard: ['click']
+    
   },
   data() {
     return {
       dateSelected: {},
     }
   },
-  //
+  methods:{
+
+  }
 }
 </script>

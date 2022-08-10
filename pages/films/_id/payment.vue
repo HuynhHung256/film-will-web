@@ -9,33 +9,39 @@
       <h2 class="text-xl font-semibold">Schedule Details</h2>
       <div class="py-6 border-b-2">
         <h3 class="text-gray-500 ">Movie Title</h3>
-        <h2 class="text-2xl">SPIDERMAN NO WAY HOME</h2>
+        <h2 class="text-2xl">{{this.Ticket.movie}}</h2>
       </div>
 
       <div class="py-6 border-b-2">
         <h3 class="text-gray-500 ">Date</h3>
-        <h2 class="text-2xl">THURSDAY, 17 DESEMBER 2021</h2>
+        <h2 class="text-2xl">{{this.Ticket.value}}</h2>
       </div>
 
       <div class="py-6 border-b-2 grid grid-cols-2 gap-2">
         <div>
           <h3 class="text-gray-500 ">Class</h3>
-          <h2 class="text-2xl">REGULAR 2D</h2>
+          <h2 class="text-2xl">{{this.Ticket.type}}</h2>
         </div>
         <div>
           <h3 class="text-gray-500 ">Time</h3>
-          <h2 class="text-2xl">14:40</h2>
+          <h2 class="text-2xl">{{this.Ticket.time}}</h2>
         </div>
       </div>
 
       <div class="py-6 border-b-2">
-        <h3 class="text-gray-500 ">Ticket ()</h3>
-        <h2 class="text-2xl">C8,C9,C10</h2>
+        <h3 class="text-gray-500 ">Seat</h3>
+        
+          <h2 class="text-xl">{{Ticket.seat}}</h2>
       </div>
 
       <div class="flex w-64 py-6">
-        <img class="object-none h-auto w-auto pr-6" src="@/assets/component/Vector 7.png" alt="#">
-        <img class="object-none h-auto w-auto pr-6" src="@/assets/component/Button.png" alt="#">
+        <NuxtLink to="/films/14">
+          <button
+            class="return 2xl:w-[200px] xl:w-[180px] lg:w-[160px] ml-12 border-2 rounded-md px-3 font-sans xl:text-xl 2xl:text-xl lg:text-lg py-3"
+          >
+            RETURN
+          </button>
+        </NuxtLink>
       </div>
     </div>
 
@@ -48,13 +54,14 @@
         <div class="">
           <div class="flex grid-cols-2 ">
             <div>
-              <h3 class="uppercase">Regular seat</h3>
+              <h3 class="uppercase">{{this.Ticket.type}}</h3>
             </div>
 
             <div>
               <div class="flex space-x-4 justify-end">
-                <h3 class="">Pr:50000 VND</h3>
-                <h3 class="">x3</h3>
+                <h1></h1>
+                <h3 class="">{{this.Ticket.price}}</h3>
+                <h3 class="">x {{this.Ticket.seat.length}}</h3>
               </div>
             </div>
           </div>
@@ -65,8 +72,9 @@
             </div>
             <div>
               <div class="flex space-x-4 justify-end">
-                <h3 class="">Pr:50000 VND</h3>
-                <h3 class="">x3</h3>
+                <h2></h2>
+                <h3 class="">{{this.Ticket.price}}</h3>
+                <h3 class="">x 5%</h3>
               </div>
             </div>
           </div>
@@ -74,16 +82,17 @@
       </div>
 
       <div class="pt-8 pb-8 border-b-2">
-        <h2 class="font-semibold">Promo & Voucher</h2>
+        <h2 class="font-semibold">Coupon & Voucher</h2>
         <div class="">
           <div class="flex grid-cols-2 ">
             <div>
-              <h3 class="uppercase">Promo TIX ID</h3>
+              <h3 class="uppercase">happy tuesday</h3>
             </div>
 
             <div>
               <div class="flex space-x-4 justify-end">
-                <h3 class="">- Pr:70000 VND</h3>
+                <h1></h1>
+                <h3 class="">Discount 15%</h3>
               </div>
             </div>
           </div>
@@ -94,12 +103,12 @@
         <div class="">
           <div class="flex grid-cols-2 ">
             <div>
-              <h3 class="font-bold">Total Bayar</h3>
+              <h3 class="font-bold">Total</h3>
             </div>
 
             <div>
               <div class="flex space-x-4 justify-end font-bold">
-                <h3 class="">Pr:70000 VND</h3>
+                <h3 class="">: 70000 VND</h3>
               </div>
             </div>
           </div>
@@ -152,7 +161,9 @@
 export default {
   data() {
     return {
-      
+      Ticket:{
+        ...this.$store.getters["ticket/ticket"]
+      },
     }
   }
 }

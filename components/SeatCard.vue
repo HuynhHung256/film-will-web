@@ -44,9 +44,7 @@
             >
               <div v-for="(num, j) in leftSeat" :key="j">
                 <button
-                  class="rounded-lg text-black border border-gray-600 bg-white hover:bg-sky-500 hover:text-white py-2 px-4"
-                  @click="chooseSeat(num, char)"
-                  :class="seatSeleted.includes(char + num) ? 'bg-sky-500 text-white' : 'bg-white text-black'"
+                  class="rounded-lg text-black border border-gray-600 bg-white hover:bg-sky-900 hover:text-white py-2 px-4"
                 >
                   {{ char }}{{ num }}
                 </button>
@@ -61,10 +59,7 @@
             >
               <div v-for="(num, j) in rightSeat" :key="j">
                 <button
-                  class="rounded-lg text-black border border-gray-600 bg-white hover:bg-sky-500 hover:text-white py-2 px-4"
-                  @click="chooseSeat(num, char)"
-                  :class="seatSeleted.includes(char + num) ? 'bg-sky-500 text-white' : 'bg-white text-black'"
-
+                  class="rounded-lg text-black border border-gray-600 bg-white hover:bg-sky-900 hover:text-white py-2 px-4"
                 >
                   {{ char }}{{ num }}
                 </button>
@@ -87,7 +82,6 @@
               <NuxtLink to="/films/14">
                 <button
                   class="return 2xl:w-[200px] xl:w-[180px] lg:w-[160px] ml-12 border-2 rounded-md px-3 font-sans xl:text-xl 2xl:text-xl lg:text-lg py-3"
-                  @click="setStore"
                 >
                   RETURN
                 </button>
@@ -97,7 +91,6 @@
               <NuxtLink to="/films/14/payment">
                 <button
                   class="confirmation 2xl:w-[240px] xl:w-[220px] lg:w-[200px] bg-[#1A2C50] text-[#FFBE00] border-2 rounded-md lg:ml-6 px-3 font-sans xl:text-xl 2xl:text-xl lg:text-lg py-3"
-                  @click="setStore"
                 >
                   CONFIRM
                 </button>
@@ -166,31 +159,10 @@ input[type="checkbox"]:checked + span {
 export default {
   data() {
     return {
-      seatSeleted: [],
       alphabet: "ABCDEFGH",
       leftSeat: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       rightSeat: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-      ticket: {
-        ...this.$store.getters["ticket/ticket"],
-      },
     };
   },
-  fetch() {
-    console.log("ticket: ", this.ticket);
-  },
-  methods:{
-    chooseSeat(num, char) {
-      if (this.seatSeleted.includes(`${char}${num}`)) {
-        this.seatSeleted.splice(this.seatSeleted.indexOf(`${char}${num}`), 1);
-      } else {
-        this.seatSeleted.push(`${char}${num}`);
-      }
-    },
-    setStore(){
-      this.$store.dispatch("ticket/setSeat", this.seatSeleted)
-      const val ={...this.$store.getters["ticket/ticket"]}
-      console.log("TICKET: ",val)
-    }
-  }
 };
 </script>
