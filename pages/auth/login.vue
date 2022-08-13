@@ -23,7 +23,7 @@
     </div>
 
     <div class="col-span-2">
-      <div class="w-9/12 bg-white px-24 pb-10 pt-20 rounded-lg scale-90">
+      <div class="w-7/12 bg-white px-24 pb-10 pt-10 rounded-lg scale-90">
         <h1 class="text-5xl font-semibold mb-16">Login to FILM WILL</h1>
         <form
           id="login-form"
