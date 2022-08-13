@@ -218,7 +218,7 @@ export default {
           datetime: "Thursday, 16 Desember 2021, 14:40",
           place: "Hung Vuong Plaza CGV",
           type: "( Regular 2D)",
-          status: 0,
+          status: 1,
         },
         {
           id: 4,
@@ -227,7 +227,7 @@ export default {
           datetime: "Thursday, 16 Desember 2021, 14:40",
           place: "Hung Vuong Plaza CGV",
           type: "( Regular 2D)",
-          status: 0,
+          status: 1,
         },
         {
           id: 5,
