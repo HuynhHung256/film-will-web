@@ -147,6 +147,17 @@
           </div>
           
         </div>
+        <div class="mt-5">
+        <nuxt-link to="/films/14/choose-seat">
+          <!-- <button class="border rounded-lg p-4 mx-3 my-3 text-center 
+          cursor-pointer w-[85px] shadow hover:-translate-y-1 hover:scale-125 duration-500 ">
+            <p class="text-[16px]">BACK</p>
+          </button> -->
+          <button type="button" class="bg-sky-900 rounded-lg py-4 px-16 ">
+          <h1 class="text-white font-semibold uppercase">choose seat</h1>
+        </button>
+        </nuxt-link>
+      </div>
       </div>
       
     <div class="w-[50%]">
@@ -170,9 +181,10 @@
             <p>{{this.Ticket.seat}}</p>
           </div>
           <p>*Seat selection can be made after this</p>
-           <nuxt-link to="/films/14/choose-seat">
+          <nuxt-link to="/films/14/payment">
             <button
               class="text-white btn-color rounded-lg text-[20px] w-full py-4 font-bold mt-2"
+              :disabled="!TypeSelected.time || !dateSelected.value || Ticket.seat.length === 0 "
             >
               BUY NOW
             </button>
