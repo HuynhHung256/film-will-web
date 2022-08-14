@@ -33,6 +33,11 @@
             </ul>
           </div>
         </div>
+                <div
+          class="flex w-full mt-14 bg-[#118EEA] h-14 text-white text-center justify-center items-center font-sans text-2xl font-bold cursor-default"
+        >
+          <h1>Cinema Screen Here</h1>
+        </div>
         <div class="flex ml-10 mt-20 space-x-14">
           <!-- Seat Map -->
 
@@ -72,11 +77,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="flex w-full mt-14 bg-[#118EEA] h-14 text-white text-center justify-center items-center font-sans text-2xl font-bold cursor-default"
-        >
-          <h1>Cinema Screen Here</h1>
-        </div>
+
         <div class="flex width-full mx-20 mt-14">
           <div class="flex w-1/2">
             <div class="w-1/2">Total</div>
