@@ -10,7 +10,7 @@ export const mutations = {
 
 export const actions = {
   login({ commit }, value) {
-    if(value.email === 'admin' && value.password === 'admin') {
+    if(value.email === 'admin@gmail.com' && value.password === 'admin') {
       commit('set_state', true)
     }
   },
