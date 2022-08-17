@@ -5,13 +5,13 @@
       </div>
 
       <div class="flex justify-center pl-8 scale-75">
-        <img :src="img" alt="#">
+        <img src="@/assets/component/success.png" alt="#">
       </div>
 
       <div class="flex justify-center max-w-xl text-center">Transaction details have been sent to your email, you can also check other ticket details on my ticket either on the website or on your smartphone.</div>
     
       <div class="flex justify-center pt-4">
-        <NuxtLink to="/account/tickets" class="text-gray-400 hover:bg-gray-700 hover:text-white text-xl border-2 border-gray-700 px-8  py-2 rounded-md font-medium">My Ticket</NuxtLink>
+        <NuxtLink to="/account/tickets" class="bg-gray-700 hover:bg-gray-800 hover:text-white text-xl border-2 text-white px-8  py-2 rounded-md font-medium">My Ticket</NuxtLink>
       
       </div>
     </div>
@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       img:{
-        src: '@/component/success.png',
+        src: '@/assets/component/success.png',
         alt: '#'
       }
     }

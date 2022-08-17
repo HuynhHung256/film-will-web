@@ -12,11 +12,18 @@
       <div class="max-w-custom w-full">
         <div class="flex justify-around ml-20 mt-20">
           <div class="w-1/5 justify-start">
+            <p class="text-xl text-primary mb-2">
+              {{ this.ticket.value }}
+            </p>
             <div
               class="flex items-center justify-between font-sans text-2xl font-bold"
             >
-              <img style="height: 20px" src="@/page html/html khoa/clock.svg" />
-              14:00
+              <img
+                v-if="this.ticket.time"
+                style="height: 20px"
+                src="@/page html/html khoa/clock.svg"
+              />
+              <div class="w-full pl-2">{{ this.ticket.time }}</div>
             </div>
           </div>
           <div class="w-3/5">
@@ -33,7 +40,7 @@
             </ul>
           </div>
         </div>
-                <div
+        <div
           class="flex w-full mt-14 bg-[#118EEA] h-14 text-white text-center justify-center items-center font-sans text-2xl font-bold cursor-default"
         >
           <h1>Cinema Screen Here</h1>
@@ -51,7 +58,11 @@
                 <button
                   class="rounded-lg text-black border border-gray-600 bg-white hover:bg-sky-500 hover:text-white py-2 px-4"
                   @click="chooseSeat(num, char)"
-                  :class="seatSeleted.includes(char + num) ? 'bg-sky-500 text-white' : 'bg-white text-black'"
+                  :class="
+                    seatSeleted.includes(char + num)
+                      ? 'bg-sky-500 text-white'
+                      : 'bg-white text-black'
+                  "
                 >
                   {{ char }}{{ num }}
                 </button>
@@ -68,8 +79,11 @@
                 <button
                   class="rounded-lg text-black border border-gray-600 bg-white hover:bg-sky-500 hover:text-white py-2 px-4"
                   @click="chooseSeat(num, char)"
-                  :class="seatSeleted.includes(char + num) ? 'bg-sky-500 text-white' : 'bg-white text-black'"
-
+                  :class="
+                    seatSeleted.includes(char + num)
+                      ? 'bg-sky-500 text-white'
+                      : 'bg-white text-black'
+                  "
                 >
                   {{ char }}{{ num }}
                 </button>
@@ -80,30 +94,58 @@
 
         <div class="flex width-full mx-20 mt-14">
           <div class="flex w-1/2">
-            <div class="w-1/2">Total</div>
-            <div class="w-1/2">Choosing</div>
+            <div class="w-1/4 text-xl">Total:</div>
+
+            <i class="text-xl font-bold text-sky-900 w-1/4"
+              >{{ this.seatSeleted.length }}
+            </i>
+            <div class="w-1/4 text-xl">Choosing:</div>
+            <div class="w-1/4 text-xl">
+              <i
+                v-for="(seat, index) in seatSeleted"
+                :key="index"
+                class="font-bold text-sky-900"
+                >{{ seatWithComma(index) }}
+              </i>
+            </div>
           </div>
           <div class="flex w-1/2 justify-end">
             <div class="w-1/2">
               <NuxtLink to="/films/14">
                 <button
-                  class="return 2xl:w-[200px] xl:w-[180px] lg:w-[160px] ml-12 border-2 rounded-md px-3 font-sans xl:text-xl 2xl:text-xl lg:text-lg py-3"
+                  class="bg-gray-300 hover:bg-gray-400 2xl:w-[200px] xl:w-[180px] lg:w-[160px] border-2 rounded-md px-3 font-sans xl:text-xl 2xl:text-xl lg:text-lg py-3 drop-shadow-md"
                   @click="setStore"
                 >
-                  RETURN
+                  <span>RETURN</span>
                 </button>
               </NuxtLink>
             </div>
             <div class="w-1/2">
               <NuxtLink to="/films/14/payment">
                 <button
-                  class="confirmation 2xl:w-[240px] xl:w-[220px] lg:w-[200px] bg-[#1A2C50] text-[#FFBE00] border-2 rounded-md lg:ml-6 px-3 font-sans xl:text-xl 2xl:text-xl lg:text-lg py-3"
+                  class="2xl:w-[240px] xl:w-[220px] lg:w-[200px] border-2 rounded-md lg:ml-6 px-3 font-sans 2xl:text-xl py-3"
                   @click="setStore"
+                  :class="
+                    seatSeleted.length !== 0 && ticket.time && ticket.value
+                      ? 'bg-sky-800 text-white hover:bg-sky-900'
+                      : 'bg-gray-500 text-white'
+                  "
+                  :disabled="
+                    !ticket.time || !ticket.value || seatSeleted.length === 0
+                  "
                 >
                   CONFIRM
                 </button>
               </NuxtLink>
             </div>
+          </div>
+        </div>
+        <div class="flex w-full mt-4">
+          <div class="w-3/4"></div>
+          <div class="w-1/4">
+            <i v-if="!ticket.time || !ticket.value" class="text-red-500">
+              *Please select date time before payment
+            </i>
           </div>
         </div>
       </div>
@@ -179,7 +221,7 @@ export default {
   fetch() {
     console.log("ticket: ", this.ticket);
   },
-  methods:{
+  methods: {
     chooseSeat(num, char) {
       if (this.seatSeleted.includes(`${char}${num}`)) {
         this.seatSeleted.splice(this.seatSeleted.indexOf(`${char}${num}`), 1);
@@ -187,11 +229,18 @@ export default {
         this.seatSeleted.push(`${char}${num}`);
       }
     },
-    setStore(){
-      this.$store.dispatch("ticket/setSeat", this.seatSeleted)
-      const val ={...this.$store.getters["ticket/ticket"]}
-      console.log("TICKET: ",val)
-    }
-  }
+    setStore() {
+      this.$store.dispatch("ticket/setSeat", this.seatSeleted);
+      const val = { ...this.$store.getters["ticket/ticket"] };
+      console.log("TICKET: ", val);
+    },
+    seatWithComma(index) {
+      if (index !== this.seatSeleted.length - 1) {
+        return `${this.seatSeleted[index]},`;
+      } else {
+        return this.seatSeleted[index];
+      }
+    },
+  },
 };
 </script>
