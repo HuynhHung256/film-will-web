@@ -94,7 +94,7 @@
 
         <div class="flex width-full mx-20 mt-14">
           <div class="flex w-1/2">
-            <div class="w-1/4 text-xl">Total:</div>
+            <!-- <div class="w-1/4 text-xl">Total:</div>
 
             <i class="text-xl font-bold text-sky-900 w-1/4"
               >{{ this.seatSeleted.length }}
@@ -107,21 +107,21 @@
                 class="font-bold text-sky-900"
                 >{{ seatWithComma(index) }}
               </i>
-            </div>
+            </div> -->
           </div>
           <div class="flex w-1/2 justify-end">
             <div class="w-1/2">
               <NuxtLink to="/films/14">
                 <button
                   class="bg-gray-300 hover:bg-gray-400 2xl:w-[200px] xl:w-[180px] lg:w-[160px] border-2 rounded-md px-3 font-sans xl:text-xl 2xl:text-xl lg:text-lg py-3 drop-shadow-md"
-                  @click="setStore"
+                  @click="setStore(0)"
                 >
-                  <span>RETURN</span>
+                  <span>CANCEL</span>
                 </button>
               </NuxtLink>
             </div>
             <div class="w-1/2">
-              <NuxtLink to="/films/14/payment">
+              <NuxtLink to="/films/14/">
                 <button
                   class="2xl:w-[240px] xl:w-[220px] lg:w-[200px] border-2 rounded-md lg:ml-6 px-3 font-sans 2xl:text-xl py-3"
                   @click="setStore"
@@ -229,10 +229,16 @@ export default {
         this.seatSeleted.push(`${char}${num}`);
       }
     },
-    setStore() {
-      this.$store.dispatch("ticket/setSeat", this.seatSeleted);
-      const val = { ...this.$store.getters["ticket/ticket"] };
-      console.log("TICKET: ", val);
+    setStore(val) {
+      if(val===0){
+        this.seatSeleted=[]
+        this.$store.dispatch("ticket/setSeat", this.seatSeleted)
+      }
+      else{
+      this.$store.dispatch("ticket/setSeat", this.seatSeleted)
+      const val = { ...this.$store.getters["ticket/ticket"] }
+      console.log("TICKET: ", val)
+      }
     },
     seatWithComma(index) {
       if (index !== this.seatSeleted.length - 1) {

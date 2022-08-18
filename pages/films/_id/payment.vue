@@ -191,7 +191,7 @@
         class="rounded-xl"
           src="https://ecdn.game4v.com/g4v-content/uploads/2021/11/26091930/NWH-poster-1-game4v-1637893169-6.jpg"
         />
-        <h1 class="text-[24px] font-bold text-center">{{ this.Ticket.movie  }}</h1>
+        <!-- <h1 class="text-[24px] font-bold text-center">{{ this.Ticket.movie  }}</h1> -->
         
       </div>
     </div>

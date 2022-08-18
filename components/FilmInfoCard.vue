@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="img" class="w-[600px] h-[600px]" />
+    <img :src="img" class="w-[600px] h-[600px] rounded-xl" />
     <h1 class="text-[24px] font-bold text-center">{{ filmInfo.title }}</h1>
     <div class="flex px-[70px]">
       <p class="flex-1">Genre:</p>
